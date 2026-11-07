@@ -1,0 +1,25 @@
+{
+  "name": "edish11",
+  "version": "1.0.0",
+  "description": "> **Dedicated Tech Teams in India.** Built at Your Comfort, Anchored in Heritage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swear1style-sketch/edish11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/swear1style-sketch/edish11/issues"
+  },
+  "homepage": "https://github.com/swear1style-sketch/edish11#readme",
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}

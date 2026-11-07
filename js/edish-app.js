@@ -104,7 +104,7 @@ export function CountingHouseCalculator({ onOpenModal }) {
         React.createElement('p', {
           key: 'sub',
           style: { fontFamily: 'var(--ctl-sans)', fontSize: '1rem', color: 'var(--ctl-text)', lineHeight: 1.6 }
-        }, 'Model your technical pod topography in Jaipur. Benefit from 58% lower operational cost than Bengaluru and 3x higher engineer tenure, with 100% statutory equity transfer at month 12.')
+        }, 'Model your technical pod topography in India. Benefit from 58% lower operational cost than Tier-1 metro corridors and 3x higher engineer tenure, with 100% statutory equity transfer at month 12.')
       ]),
 
       React.createElement('div', { key: 'grid', className: 'ctl-calc-grid' }, [
@@ -194,7 +194,7 @@ export function CountingHouseCalculator({ onOpenModal }) {
           ]),
 
           React.createElement('div', { className: 'ctl-ledger-row' }, [
-            React.createElement('span', { key: 'l2' }, 'Tier-1 India (Bengaluru / NCR)'),
+            React.createElement('span', { key: 'l2' }, 'Tier-1 Metros (Bengaluru / NCR)'),
             React.createElement('span', { key: 'v2', className: 'ctl-ledger-val' }, fmt(annualBlr))
           ]),
 
@@ -202,14 +202,14 @@ export function CountingHouseCalculator({ onOpenModal }) {
             className: 'ctl-ledger-row',
             style: { background: 'rgba(245, 212, 138, 0.1)', margin: '4px -12px', padding: '14px 12px', borderBottom: 'none' }
           }, [
-            React.createElement('span', { key: 'l3', style: { fontWeight: 600, color: '#F5D48A' } }, 'Edish Connect (Jaipur GCC)'),
+            React.createElement('span', { key: 'l3', style: { fontWeight: 600, color: '#F5D48A' } }, 'Edish Connect (Heritage Delivery Pod)'),
             React.createElement('span', { key: 'v3', className: 'ctl-ledger-val', style: { fontWeight: 700, color: '#F5D48A' } }, fmt(annualJpr))
           ]),
 
           React.createElement('div', { className: 'ctl-ledger-total' }, [
             React.createElement('div', { key: 'tlabel' }, [
               React.createElement('div', { style: { fontFamily: 'var(--ctl-sans)', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'rgba(247, 244, 236, 0.7)' } }, 'Annual Net Arbitrage'),
-              React.createElement('div', { style: { fontFamily: 'var(--ctl-sans)', fontSize: '0.85rem', color: '#F5D48A', marginTop: 4 } }, `${arbitragePercent}% lower than Bengaluru`)
+              React.createElement('div', { style: { fontFamily: 'var(--ctl-sans)', fontSize: '0.85rem', color: '#F5D48A', marginTop: 4 } }, `${arbitragePercent}% lower than Tier-1 Metros`)
             ]),
             React.createElement('div', { key: 'tamt', className: 'ctl-ledger-savings-amt' }, `${fmt(netSavingsBlr)}/yr`)
           ]),
@@ -270,7 +270,7 @@ export function ConsultationModal({ isOpen, onClose, initialData = {} }) {
         }, 'Advisory Request Received'),
         React.createElement('p', {
           style: { fontFamily: 'var(--ctl-sans)', fontSize: '0.95rem', color: 'var(--ctl-text)', lineHeight: 1.6 }
-        }, `Thank you, ${formData.name || 'Partner'}. A founding principal from our Jaipur advisory practice will review your specification and reach out within 24 hours.`),
+        }, `Thank you, ${formData.name || 'Partner'}. A founding principal from our advisory practice will review your specification and reach out within 24 hours.`),
         React.createElement('button', {
           type: 'button',
           className: 'ctl-btn',
@@ -337,7 +337,7 @@ export function ConsultationModal({ isOpen, onClose, initialData = {} }) {
             }, [
               React.createElement('option', { key: 'm1', value: 'Dedicated Engineering Pod' }, 'Dedicated Engineering Pod'),
               React.createElement('option', { key: 'm2', value: 'Build-Operate-Transfer (BOT)' }, 'Build-Operate-Transfer (BOT)'),
-              React.createElement('option', { key: 'm3', value: 'Jaipur GCC Advisory' }, 'Jaipur GCC Advisory'),
+              React.createElement('option', { key: 'm3', value: 'Enterprise GCC Advisory' }, 'Enterprise GCC Advisory'),
               React.createElement('option', { key: 'm4', value: 'AI/ML & Cloud Migration Pod' }, 'AI/ML & Cloud Migration Pod')
             ])
           ])
@@ -376,7 +376,7 @@ export default function EdishApp() {
   };
 
   const navItems = [
-    { label: "About", href: "#about" },
+    { label: "Heritage", href: "#about" },
     { label: "Operating Models", href: "#solutions" },
     { label: "Staircase Framework", href: "#services" },
     { label: "Arbitrage Calculator", href: "#calculator" },
@@ -385,7 +385,7 @@ export default function EdishApp() {
 
   const heroData = {
     title: "Built at Your Comfort\nRooted in Heritage",
-    subtitle: "Jaipur capability center & dedicated engineering pods. Where three centuries of mathematical precision meet modern software engineering.",
+    subtitle: "Where three centuries of mathematical precision and architectural discipline meet modern software engineering. Dedicated Tech Teams in India.",
     action: { label: "Explore Operating Models", href: "#solutions" },
     est: "EST. 1727",
     edition: "VOL. I — Nº 01"
@@ -403,29 +403,29 @@ export default function EdishApp() {
   ];
 
   const aboutData = {
-    kicker: "The Jaipur Advantage · Est. 1727",
-    statement: "We bring the architectural discipline of Jaipur's 1727 grid to *dedicated engineering pods* — zero attrition, 58% cost arbitrage, total IP sovereignty.",
-    body: "Founded as an elite capability center and pod advisory, Edish Connect designs, builds, and transfers sovereign tech teams in Jaipur. We unite premier technical talent with the stability of India's most livable Tier-2 tech capital.",
+    kicker: "The Heritage of Precision · Est. 1727",
+    statement: "We bring the patience of classical masters to *modern engineering pods* — zero attrition, architectural discipline, total IP sovereignty.",
+    body: "Founded on the principles of geometric order and enduring craft, Edish Connect builds dedicated capability centers and engineering pods in India. We reject high-churn metro IT sweatshops in favor of permanent engineering guilds: deep institutional memory, culture-aligned teams, and sovereign technology assets built to outlast market cycles.",
     stats: [
-      { value: 58, suffix: "%", label: "Cost Arbitrage vs Bengaluru" },
+      { value: 58, suffix: "%", label: "Cost Arbitrage vs Metro Hubs" },
       { value: 94, suffix: "%", label: "Annual Pod Retention Rate" },
       { value: 4, suffix: "wks", label: "Average Time-to-Deploy" }
     ],
-    seal: "Edish Connect · Jaipur 1727 Precision · Engineering Meets Inspiration · "
+    seal: "Edish Connect · Architectural Precision · Heritage & Craft · Engineering Meets Inspiration · "
   };
 
   const solutionsCopy = {
     kicker: "Operating Models",
     title: "Three pathways, *one sovereign standard*",
-    intro: "Pull a bookmark from the shelf. Each is an operating model engineered for risk-free talent acquisition, full IP custody, and long-term capability building."
+    intro: "Pull a bookmark from the shelf. Each is an operating model engineered for permanent custody, mathematical rigor, and risk-free capability building."
   };
 
   const solutionsList = [
     {
       kicker: "Model I",
       title: "Dedicated Engineering Pods",
-      quote: "Your own high-velocity team, embedded directly into your sprint rituals.",
-      body: "Pre-vetted, autonomous full-stack pods (Architects, Tech Leads, Senior Engineers, QA, DevOps) working exclusively for your company. Retain direct daily standup control while we handle Tier-2 talent sourcing and infrastructure.",
+      quote: "Your own high-velocity guild, embedded directly into your sprint rituals.",
+      body: "Pre-vetted, autonomous full-stack pods (Architects, Tech Leads, Senior Engineers, QA, DevOps) working exclusively for your company. Retain direct daily standup control while we handle sourcing, culture, and sovereign infrastructure.",
       points: ["Direct Sprint & Jira Integration", "Single-Client Exclusivity", "Sub-4 Week Pod Deployment"],
       art: "typewriter",
       tone: "paper"
@@ -433,25 +433,25 @@ export default function EdishApp() {
     {
       kicker: "Model II",
       title: "Build-Operate-Transfer (BOT)",
-      quote: "De-risk expansion today, own the Indian legal entity tomorrow.",
-      body: "We build your development center from ground up, operate the entity under strict compliance (SOC2, ISO, GDPR), and seamlessly transfer 100% legal equity, leases, and staff to your parent company at agreed milestone.",
+      quote: "De-risk expansion today, own the Indian subsidiary tomorrow.",
+      body: "We build your capability center from ground up, operate the entity under strict compliance (SOC2, ISO, GDPR), and seamlessly transfer 100% legal equity, leases, and staff to your parent company at agreed milestone.",
       points: ["Zero Day-1 Regulatory Burden", "Guaranteed Equity Handover", "100% IP & Patent Ringfencing"],
       art: "steamer",
       tone: "ink"
     },
     {
       kicker: "Model III",
-      title: "Jaipur GCC Advisory",
-      quote: "A fortress capability center in India's most stable Tier-2 tech capital.",
-      body: "Full-scope capability center setup for global enterprises. Benefit from Jaipur's 15+ premier technical universities (MNIT, BITS Pilani feeder), 3x lower attrition than Bengaluru, and world-class Tier-4 data center connectivity.",
-      points: ["Turnkey Class-A Facility Setup", "MNIT & Premier Campus Pipeline", "State Industrial & Tax Incentives"],
+      title: "Enterprise Capability Center (GCC)",
+      quote: "A fortress development center anchored in heritage and permanence.",
+      body: "Full-scope capability center setup for global enterprises. Benefit from stable talent ecosystems outside hyper-churn metro corridors, 3x higher engineer tenure, and dedicated Class-A sovereign infrastructure.",
+      points: ["Turnkey Class-A Facility Setup", "Premier Campus Talent Pipeline", "Long-Term Institutional Stability"],
       art: "monogram",
       tone: "paper"
     },
     {
       kicker: "Model IV",
       title: "Autonomous AI & Cloud Pods",
-      quote: "Modern architectures built by engineers who stay for the journey.",
+      quote: "Enduring architectures built by engineers who stay for the journey.",
       body: "Specialized pods for AI/ML model fine-tuning, cloud native migrations (AWS, Azure, GCP), and legacy modernization. Backed by senior enterprise architects with 15+ years experience at Fortune 100 institutions.",
       points: ["LLM Fine-Tuning & RAG Pipelines", "Enterprise Cloud Architecture", "Rigorous Code Review Standards"],
       art: "tower",
@@ -468,7 +468,7 @@ export default function EdishApp() {
   const servicesList = [
     {
       title: "Architecture & Talent Blueprint",
-      summary: "Skill matrix mapping, regulatory alignment, and Jaipur tech ecosystem matching.",
+      summary: "Skill matrix mapping, regulatory alignment, and technical ecosystem matching.",
       details: "We define technical pod topography, salary benchmarks, compliance firewalls, and workstation requirements tailored to your stack.",
       deliverables: ["Skill Matrix", "Compliance Map", "Tech Pod Topography"],
       duration: "Weeks 1–2"
@@ -499,13 +499,13 @@ export default function EdishApp() {
   const pressCopy = {
     kicker: "Insights & Evidence",
     title: "The Capability Chronicle",
-    intro: "Field reports, economic analyses, and architectural monographs from our Jaipur advisory practice."
+    intro: "Field reports, economic analyses, and architectural monographs from our heritage advisory practice."
   };
 
   const pressList = [
     {
-      title: "Tier-2 vs Tier-1 India: Why Jaipur is the New Global Capability Center Capital",
-      source: "GCC Digest",
+      title: "The Heritage of Precision: How Centuries of Architectural Discipline Prefigure Modern Systems Design",
+      source: "Cultural Systems",
       date: "October 24, 2026",
       category: "Feature"
     },
@@ -522,8 +522,8 @@ export default function EdishApp() {
       category: "Monograph"
     },
     {
-      title: "Jaipur 1727: How Three Centuries of Urban Precision Prefigured Modern Systems Design",
-      source: "Cultural Systems",
+      title: "Beyond the Metros: Why Capability Centers Are Thriving in Stable Heritage Tech Hubs",
+      source: "GCC Digest",
       date: "September 18, 2026",
       category: "History"
     }
@@ -531,16 +531,16 @@ export default function EdishApp() {
 
   const notesList = [
     {
-      title: "Zero Attrition Culture",
-      body: "Engineers in Jaipur build long-term tenure, eliminating the 30%+ annual turnover penalty endemic to Bengaluru tech corridors."
+      title: "Guild Retention Culture",
+      body: "Engineers build long-term tenure in stable heritage hubs, eliminating the 30%+ annual turnover penalty endemic to hyper-churn metro corridors."
     },
     {
       title: "Sovereign IP Ownership",
       body: "All code, repositories, and architectural artifacts are created directly on your secure VPC with zero intermediary IP rights."
     },
     {
-      title: "MNIT Talent Feeder",
-      body: "Direct recruitment pipeline from Jaipur's premier institutions, producing world-class computer science and mathematical minds."
+      title: "Academic Talent Pipeline",
+      body: "Direct recruitment pipeline from premier engineering institutions, producing world-class computer science and mathematical minds."
     },
     {
       title: "Tier-4 Infrastructure",
@@ -549,7 +549,7 @@ export default function EdishApp() {
   ];
 
   const contactBandData = {
-    title: "Let us build your *dedicated pod* in Jaipur.",
+    title: "Let us build your *sovereign pod* in India.",
     body: "Schedule a confidential capability evaluation. A founding principal — never a salesperson — will evaluate your stack and team requirements within 24 hours.",
     action: { label: "Schedule Strategy Call", href: "#contact" },
     secondary: { label: "Explore Staircase Framework", href: "#services" }
@@ -558,14 +558,14 @@ export default function EdishApp() {
   const contactData = {
     email: "advisory@edishconnect.com",
     phone: "+91 (141) 281-0172",
-    location: "Jaipur (HQ) · London · Singapore"
+    location: "India (Delivery HQ) · London · Singapore"
   };
 
   const columnsData = [
     {
       title: "The Advisory",
       links: [
-        { label: "Jaipur Advantage", href: "#about" },
+        { label: "Heritage of Precision", href: "#about" },
         { label: "Staircase Framework", href: "#services" },
         { label: "Cost Arbitrage", href: "#calculator" },
         { label: "Chronicle", href: "#insights" }
@@ -576,7 +576,7 @@ export default function EdishApp() {
       links: [
         { label: "Dedicated Pods", href: "#solutions" },
         { label: "BOT Advisory", href: "#solutions" },
-        { label: "Jaipur GCC", href: "#solutions" },
+        { label: "Enterprise GCC", href: "#solutions" },
         { label: "AI & Cloud Pods", href: "#solutions" }
       ]
     },
@@ -601,7 +601,7 @@ export default function EdishApp() {
       cta: { label: "Book Strategy Call", href: "#contact" },
       hero: heroData,
       clients: clientList,
-      clientsLabel: "Trusted by engineering leaders & enterprise architects worldwide",
+      clientsLabel: "Trusted by enterprise leaders & system architects globally",
       about: aboutData,
       solutionsCopy: solutionsCopy,
       solutions: solutionsList,
@@ -615,7 +615,7 @@ export default function EdishApp() {
       tagline: "Dedicated Tech Teams in India. Built at your comfort, rooted in heritage.",
       columns: columnsData,
       copyright: "© 2026 Edish Connect. All rights reserved. Engineering Meets Inspiration.",
-      palette: "cobalt",
+      palette: "navy",
       intro: false,
       calculator: React.createElement(CountingHouseCalculator, {
         key: 'calc',

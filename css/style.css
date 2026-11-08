@@ -29,7 +29,7 @@
   
   --text-primary: #071527;         /* High-contrast deep midnight navy */
   --text-body: #334155;            /* Slate 700 - Relaxed reading */
-  --text-muted: #64748B;           /* Slate 500 - Secondary captions */
+  --text-muted: rgb(100, 116, 139);           /* Slate 500 - Secondary captions */
   --text-light: #94A3B8;           /* Slate 400 */
   --text-inverse: #FFFFFF;
 
@@ -1950,7 +1950,7 @@ button, input, select, textarea {
   padding-top: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 13px;
-  color: #64748B;
+  color: rgb(100, 116, 139);
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -2422,7 +2422,7 @@ button, input, select, textarea {
 }
 
 .stair-detail-text .spec-matrix-item strong {
-  color: #64748B;
+  color: rgb(100, 116, 139);
 }
 
 .stair-detail-text .spec-matrix-item span {
@@ -2517,7 +2517,7 @@ button, input, select, textarea {
   justify-content: space-between;
   margin-top: 8px;
   font-size: 11px;
-  color: #64748B;
+  color: rgb(100, 116, 139);
   font-weight: 500;
 }
 

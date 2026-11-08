@@ -1,55 +1,46 @@
-# Edish Connect
+# Edish Connect — Where Engineering Meets Inspiration
 
-> **Dedicated Tech Teams in India.** Built at Your Comfort, Anchored in Heritage.
+> **An Engineering Growth Company**  
+> We partner with engineering leaders to build product, platform, and AI capability inside their organizations — not to staff a project and step away.
 
-High-performance dedicated engineering pods, offshore development centers (ODC), and sovereign Global Capability Centers (GCCs) in Tier-2 Jaipur, India.
+## Overview
 
----
+Edish Connect's web platform built with custom CSS scroll-driven animations, responsive layout architecture, and zero runtime overhead.
 
-## Key Features
+- **Main page**: `index.html` (pure HTML5 + CSS Scroll-Driven Animations)
+- **Alternative GSAP build**: `index.gsap.html` (powered by GSAP 3.13.0, ScrollTrigger, and Lenis smooth scrolling)
 
-- **Architectural & Heritage Typography**: Powered by **Syne** (creative display), **Fraunces** (editorial soft-serif), and **Outfit** (modern geometric sans).
-- **Executive Navy & Cobalt Palette**: Deep Midnight Navy (`#071527`), Signature Navy (`#0A1E36`), and vibrant Cobalt Blue (`#1D4ED8`).
-- **Interactive Visual Staircase**: 4-stage ascending framework (Scoped Agile Pod → Dedicated ODC → Build-Operate-Transfer → Sovereign GCC) with real-time client ownership gauge.
-- **Dynamic Cost & Savings Estimator**: Live headcount, seniority, and model calculations benchmarked against US/EU in-house compensation.
-- **Enterprise Track Record & Case Studies**: Verified implementations across BFSI banking platforms, enterprise cloud & AI pipelines, and 65-engineer BOT transitions.
-- **Governance & FAQ Accordion**: Direct answers covering 100% Day-One IP ownership, CET/EST time zone overlap, and zero-attrition transition formulas.
+## The Edish Philosophy: Two Forces, One Discipline
 
----
+- **The E (Engineering)**: Precision, Execution, Craftsmanship, Systems Thinking, Reliability
+- **The I (Inspiration)**: Innovation, Curiosity, Ideas, Growth, Human Potential
+- *“Engineering without inspiration creates systems. Inspiration without engineering creates ideas. Together, they build the future.”*
 
-## Local Development
+## Engineering Capabilities & Engagement Models
 
-Run with any local web server:
+1. **Staff Augmentation**: Immediate senior capacity embedded in your workflows
+2. **Dedicated Teams**: Standing engineering pods structured around your roadmap
+3. **Offshore Development Center (ODC)**: Dedicated facility and operational depth
+4. **Global Capability Center (GCC)**: Enterprise extension with full security & compliance governance
+5. **Build-Operate-Transfer (BOT)**: Milestone-driven incubation with turnkey IP & asset transfer
+6. **Managed Engineering Teams**: Full end-to-end accountability for delivery and uptime
+
+## Local Preview
+
+Run any static HTTP server:
 
 ```bash
-# Using Python 3
-python3 -m http.server 8001
+# Python
+python3 -m http.server 3000
 
-# Using Node / npx
+# or npx serve
 npx serve .
 ```
 
-Open [http://localhost:8001](http://localhost:8001) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
----
+## Copyright & Credits
 
-## Project Structure
-
-```
-edish11/
-├── index.html           # Main executive presentation markup
-├── css/
-│   └── style.css        # Editorial design system & responsive architecture
-├── js/
-│   └── main.js          # Lightweight, accessible interactions & calculators
-├── assets/
-│   └── images/          # Verified campus, team, and architectural imagery
-├── .gitignore
-└── README.md
-```
-
----
-
-## License
-
-© 2026 Edish Connect. All rights reserved.
+- Code: © 2026 Edish Connect. All rights reserved.
+- Photography: Free to use under the [Unsplash License](https://unsplash.com/license), see full attributions in [CREDITS.md](CREDITS.md)
+- Typography: [Geist](https://fonts.google.com/specimen/Geist) (SIL Open Font License 1.1)

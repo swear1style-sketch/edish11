@@ -1,0 +1,1248 @@
+<!doctype html>
+<!--
+  Edish Connect — Enterprise Engineering & Capability Platform
+  Copyright (c) 2026 Edish Connect. All rights reserved.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edish Connect — Where Engineering Meets Inspiration</title>
+<meta name="description" content="Edish Connect partners with engineering leaders to build product, platform and AI capability inside their organizations — not to staff a project and step away.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Edish Connect — Where Engineering Meets Inspiration">
+<meta property="og:description" content="Edish Connect partners with engineering leaders to build product, platform and AI capability inside their organizations — not to staff a project and step away.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'14'%20fill%3D'%231a2333'%2F%3E%3Ctext%20x%3D'32'%20y%3D'44'%20font-family%3D'system-ui%2C-apple-system%2Csans-serif'%20font-size%3D'36'%20font-weight%3D'700'%20text-anchor%3D'middle'%20fill%3D'%23c89538'%3EE%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnONalrErE8iusq2KkpeJNBW4zg&skey=70a816dcd17c8a3c&v=v5) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnONalrErE8iusq2KkpeJNBy4zg&skey=70a816dcd17c8a3c&v=v5) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnONalrErE8iusq2KkpeJNBe4zg&skey=70a816dcd17c8a3c&v=v5) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnONalrErE8iusq2KkpeJNBa4zg&skey=70a816dcd17c8a3c&v=v5) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnONalrErE8iusq2KkpeJNBi4zg&skey=70a816dcd17c8a3c&v=v5) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style data-module="layers">
+@layer tokens, base, atoms, layout, sections, scenes;
+</style>
+<style data-module="tokens">
+@layer tokens {
+:root {
+  --color-1: #ffffff;
+  --color-2: #0b1019;
+  --color-3: #1a2333;
+  --color-4: #dbe4ec;
+  --color-5: #9db1c4;
+  --color-6: #536477;
+  --color-7: #c89538;
+  --color-8: #edf2f6;
+  --font-1: "Geist", "Geist Fallback", system-ui, Arial, sans-serif;
+  --radius-1: 999px;
+  --shadow-1: 0 40px 90px -50px color-mix(in srgb, var(--color-3) 60%, transparent);
+  --shadow-2: 0 40px 80px -30px color-mix(in srgb, var(--color-3) 45%, transparent);
+  --space-1: clamp(20px, 3vw, 44px);
+  --space-2: clamp(12px, 3.2vw, 48px);
+  --space-3: clamp(40px, 7vw, 112px);
+}
+}
+</style>
+<style data-module="base">
+@layer base {
+@font-face { font-family: "Geist Fallback"; src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"); font-weight: 550 799; size-adjust: 100.4%; ascent-override: 100.6%; descent-override: 29.9%; line-gap-override: 0%; }
+@font-face { font-family: "Geist Fallback"; src: local("Arial"), local("ArialMT"), local("Helvetica"); font-weight: 100 549; size-adjust: 104.8%; ascent-override: 96.4%; descent-override: 28.6%; line-gap-override: 0%; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--color-4); }
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent], .lenis [data-lenis-prevent-wheel], .lenis [data-lenis-prevent-touch] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+.lenis.lenis-autoToggle { transition-property: overflow; transition-duration: 1ms; transition-behavior: allow-discrete; }
+body {
+  margin: 0; min-height: 100vh; overflow-x: clip;
+  font-family: var(--font-1); font-size: 16px; line-height: 1.55; font-weight: 400;
+  color: var(--color-2);
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(circle at 64% 42%, transparent 0 calc(44vmax - 1px), color-mix(in srgb, var(--color-1) 60%, transparent) calc(44vmax - 1px) 44vmax, transparent calc(44vmax + 1px)),
+    radial-gradient(circle at 22% 78%, transparent 0 calc(30vmax - 1px), color-mix(in srgb, var(--color-1) 45%, transparent) calc(30vmax - 1px) 30vmax, transparent calc(30vmax + 1px)),
+    radial-gradient(55% 45% at 78% 18%, color-mix(in srgb, var(--color-1) 70%, transparent), transparent 70%),
+    radial-gradient(60% 55% at 12% 88%, color-mix(in srgb, var(--color-5) 80%, transparent), transparent 72%),
+    radial-gradient(40% 40% at 40% 55%, color-mix(in srgb, var(--color-8) 70%, transparent), transparent 70%),
+    linear-gradient(165deg, var(--color-8), var(--color-4) 45%, var(--color-5));
+}
+img { display: block; max-width: 100%; }
+h1, h2, h3, p, ul, ol, figure, blockquote, dl, dd { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+sup { font-size: .32em; vertical-align: top; position: relative; top: .35em; letter-spacing: 0; margin-left: .04em; }
+:focus-visible { outline: 2px solid var(--color-7); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+}
+</style>
+<style data-module="system">
+@layer atoms {
+.m-text { font-family: var(--font-1); font-size: 16px; line-height: 1.55; font-weight: 400; letter-spacing: -0.005em; text-transform: none; font-style: normal; }
+
+.m-text-2 { font-family: var(--font-1); font-size: clamp(56px, 10vw, 150px); line-height: .86; font-weight: 500; letter-spacing: -0.065em; text-transform: none; font-style: normal; }
+
+.m-text-3 { font-family: var(--font-1); font-size: clamp(42px, 6.4vw, 96px); line-height: .92; font-weight: 500; letter-spacing: -0.055em; text-transform: none; font-style: normal; }
+
+.m-text-4 { font-family: var(--font-1); font-size: 13px; line-height: 1.35; font-weight: 500; letter-spacing: 0; text-transform: none; font-style: normal; }
+
+.m-text-5 { font-family: var(--font-1); font-size: clamp(18px, 1.5vw, 21px); line-height: 1.38; font-weight: 400; letter-spacing: -0.015em; text-transform: none; font-style: normal; }
+
+.m-text-6 { font-family: var(--font-1); font-size: clamp(21px, 1.9vw, 27px); line-height: 1.08; font-weight: 500; letter-spacing: -0.035em; text-transform: none; font-style: normal; }
+
+.m-text-7 { font-family: var(--font-1); font-size: clamp(28px, 3.5vw, 50px); line-height: 1.04; font-weight: 500; letter-spacing: -0.045em; text-transform: none; font-style: normal; }
+
+.m-btn, .m-btn-2 {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; overflow: hidden;
+  border: 0; border-radius: var(--radius-1); cursor: pointer;
+  font-family: var(--font-1); font-size: 15px; line-height: 1; font-weight: 500; letter-spacing: -0.01em; text-transform: none; font-style: normal; white-space: nowrap;
+}
+.m-btn { background: var(--color-2); color: var(--color-1); }
+.m-btn__label { display: block; }
+
+.m-btn-2 { background: var(--color-1); color: var(--color-2); }
+
+@keyframes m-streak-label { 0% { transform: none; } 44% { transform: translateX(140%) skewX(-24deg); } 45% { transform: translateX(-140%) skewX(-24deg); } 100% { transform: none; } }
+@media (hover: hover) {
+  .m-btn:hover .m-btn__label, .m-btn-2:hover .m-btn__label { animation: m-streak-label .55s cubic-bezier(.6, 0, .2, 1); }
+}
+
+.m-link {
+  display: inline; padding-bottom: 2px; color: inherit;
+  font-family: var(--font-1); font-size: 15px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; text-transform: none; font-style: normal;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+}
+@keyframes m-streak-line { 0% { background-position: 0 100%; background-size: 100% 1px; } 45% { background-position: 100% 100%; background-size: 0 1px; } 46% { background-position: 0 100%; background-size: 0 1px; } 100% { background-position: 0 100%; background-size: 100% 1px; } }
+@media (hover: hover) { .m-link:hover { animation: m-streak-line .6s cubic-bezier(.6, 0, .2, 1); } }
+
+.m-iconbtn {
+  position: relative; display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; flex: none;
+  border: 1px solid currentColor; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; isolation: isolate;
+}
+.m-iconbtn::before { content: ""; position: absolute; inset: -1px; z-index: -1; border-radius: 50%; background: var(--color-2); transform: scale(0); transition: transform .35s cubic-bezier(.6, 0, .2, 1); }
+.m-iconbtn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; transition: color .35s; }
+@media (hover: hover) { .m-iconbtn:hover::before { transform: scale(1); } .m-iconbtn:hover svg { color: var(--color-1); } }
+
+.m-badge {
+  display: inline-block; padding: 6px 11px; border-radius: var(--radius-1); background: var(--color-1); color: var(--color-2);
+  font-family: var(--font-1); font-size: 13px; line-height: 1.2; font-weight: 500; letter-spacing: -0.005em; text-transform: none; font-style: normal;
+}
+
+.m-slide, .m-slide-2, .m-slide-3 { position: relative; box-shadow: var(--shadow-1); }
+.m-slide { background: var(--color-1); color: var(--color-2); }
+.m-slide::before, .m-slide::after, .m-slide-2::before, .m-slide-2::after, .m-slide-3::before, .m-slide-3::after {
+  content: ""; position: absolute; width: 13px; height: 13px; pointer-events: none; z-index: 3; opacity: .7;
+  background: linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat, linear-gradient(currentColor, currentColor) center / 1px 100% no-repeat;
+}
+.m-slide::before, .m-slide-2::before, .m-slide-3::before { top: 16px; right: 16px; }
+.m-slide::after, .m-slide-2::after, .m-slide-3::after { bottom: 16px; left: 16px; }
+
+.m-slide-2 { background: var(--color-3); color: var(--color-1); }
+.m-slide-2 :focus-visible { outline-color: var(--color-1); }
+
+.m-slide-3 { background: linear-gradient(140deg, var(--color-1), var(--color-8) 55%, var(--color-4)); color: var(--color-2); }
+
+.m-orb {
+  display: block; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, var(--color-1) 0 7%, var(--color-8) 26%, var(--color-5) 76%, color-mix(in srgb, var(--color-5) 82%, var(--color-3)) 100%);
+  box-shadow: var(--shadow-2);
+}
+
+.m-chip { display: block; aspect-ratio: 1; width: 1em; height: auto; border-radius: 50%; object-fit: cover; filter: saturate(.5); }
+
+.m-field { display: grid; gap: 6px; }
+.m-field__label { font-family: var(--font-1); font-size: 13px; line-height: 1.35; font-weight: 500; letter-spacing: 0; text-transform: none; font-style: normal; color: var(--color-6); }
+.m-field input, .m-field select, .m-field textarea {
+  width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid var(--color-5); border-radius: 0; background: var(--color-8); color: var(--color-2);
+  font-family: var(--font-1); font-size: 16px; line-height: 1.4; font-weight: 400; letter-spacing: -0.005em; text-transform: none; font-style: normal;
+}
+.m-field textarea { min-height: 112px; resize: vertical; }
+.m-field :focus-visible { outline-offset: 0; border-color: var(--color-7); }
+}
+</style>
+<style data-module="layout">
+@layer layout {
+main { overflow-x: clip; }
+.l-sec { position: relative; padding-inline: var(--space-2); margin-top: var(--space-3); }
+}
+</style>
+<style data-module="section:navigation">
+@layer sections {
+#navigation { position: fixed; inset: 0 0 auto 0; z-index: 50; pointer-events: none; }
+#navigation .nav__bar {
+  pointer-events: auto; margin: 12px var(--space-2) 0; height: 56px; padding: 0 8px 0 20px;
+  display: flex; align-items: center; gap: 24px;
+  background: color-mix(in srgb, var(--color-1) 72%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-1); box-shadow: var(--shadow-1);
+  transition: transform .45s cubic-bezier(.6, 0, .2, 1);
+}
+#navigation .nav__bar[data-hidden] { transform: translateY(calc(-100% - 16px)); }
+#navigation .nav__logo { font-size: 22px; font-weight: 600; letter-spacing: -0.06em; line-height: 1; }
+#navigation .nav__line { color: var(--color-6); white-space: nowrap; }
+#navigation .nav__links { display: flex; gap: 22px; margin-left: auto; }
+#navigation .nav__links .m-link { background-size: 0 1px; }
+#navigation .nav__cta { min-height: 40px; padding: 0 18px; }
+#navigation .nav__menu { display: none; }
+#navigation .menu {
+  pointer-events: auto; position: fixed; inset: 0; z-index: 2; padding: 84px var(--space-2) var(--space-2); overflow-y: auto;
+  background: var(--color-3); color: var(--color-1);
+}
+#navigation .menu[hidden] { display: none; }
+#navigation .menu__close { position: absolute; top: 18px; right: var(--space-2); }
+#navigation .menu__links { display: grid; gap: 4px; }
+#navigation .menu__links a { display: block; padding: 6px 0; font-size: clamp(40px, 12vw, 64px); line-height: 1; }
+#navigation .menu__cta { margin-top: 32px; }
+@media (max-width: 1100px) { #navigation .nav__line { display: none; } }
+@media (max-width: 900px) {
+  #navigation .nav__links, #navigation .nav__cta { display: none; }
+  #navigation .nav__menu { display: inline-grid; margin-left: auto; }
+  #navigation .nav__bar { padding-right: 6px; }
+}
+}
+</style>
+<style data-module="section:hero">
+@layer sections {
+#hero { position: relative; }
+#hero .op-s1 { position: sticky; top: 0; height: 100svh; padding: 84px var(--space-2) var(--space-2); }
+#hero .op-ground {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-5) 85%, transparent), color-mix(in srgb, var(--color-5) 30%, transparent) 70%, transparent);
+}
+#hero .op-frame { position: relative; height: 100%; }
+#hero .op-slide { position: relative; height: 100%; overflow: hidden; container-type: inline-size; }
+#hero .op-photo { position: absolute; inset: 0 42% 0 0; overflow: hidden; }
+#hero .op-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; filter: saturate(.4) contrast(1.06); }
+#hero .op-photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color-3) 30%, transparent) 0%, color-mix(in srgb, var(--color-3) 45%, transparent) 70%, var(--color-3) 100%);
+}
+#hero .op-dim { position: absolute; inset: 0; z-index: 4; background: var(--color-3); opacity: 0; pointer-events: none; }
+#hero .op-ring {
+  position: absolute; z-index: 1; width: 64cqw; aspect-ratio: 1; left: 50%; top: 50%; margin: -32cqw 0 0 -24cqw;
+  border: 1px solid color-mix(in srgb, var(--color-1) 28%, transparent); border-radius: 50%; pointer-events: none;
+}
+#hero .op-ring__orb { position: absolute; width: 4.6cqw; left: 50%; top: 0; margin: -2.3cqw 0 0 -2.3cqw; }
+#hero .op-title { position: absolute; z-index: 2; left: 5.5%; top: 14%; right: 3%; color: var(--color-1); font-size: 10.4cqw; }
+#hero .op-line { display: block; width: max-content; max-width: 100%; font-size: min(1em, calc(86cqw / (var(--len) * .52))); }
+#hero .op-line--2 { margin-left: 2.7em; }
+#hero .op-line--3 { margin-left: 1.25em; }
+#hero .op-line__in { display: block; }
+#hero .op-meta { position: absolute; z-index: 2; right: var(--space-1); bottom: var(--space-1); width: min(400px, 36%); display: grid; gap: 22px; }
+#hero .op-meta .m-text-5 { color: var(--color-1); }
+#hero .op-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+#hero .op-actions .m-btn-2 { min-height: 53px; padding: 0 27px; font-size: 16.5px; }
+#hero .op-s2 { position: relative; z-index: 2; min-height: 100svh; padding: 84px var(--space-2) var(--space-2); display: flex; }
+#hero .op-card {
+  position: relative; width: 74%; min-height: calc(100svh - 84px - var(--space-2)); padding: var(--space-1);
+  display: grid; grid-template-rows: auto 1fr auto; gap: 24px; container-type: inline-size;
+}
+#hero .op-title2 { position: relative; z-index: 2; font-size: min(15cqw, calc(92cqw / (var(--len) * .5))); }
+#hero .op-orb { position: absolute; z-index: 1; width: clamp(220px, 27vw, 400px); right: -9%; top: 27%; }
+#hero .op-chip { position: absolute; z-index: 2; font-size: clamp(72px, 7vw, 104px); left: 47%; top: 50%; }
+#hero .op-cols { position: relative; z-index: 2; grid-row: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; max-width: 600px; }
+#hero .op-cols .m-text { color: var(--color-6); }
+#hero .op-cols .m-link { grid-column: 1 / -1; justify-self: start; }
+@media (max-width: 767px) {
+  #hero .op-s1 { padding-top: 76px; }
+  #hero .op-photo { inset: 0 0 46% 0; }
+  #hero .op-photo::after { background: linear-gradient(180deg, color-mix(in srgb, var(--color-3) 30%, transparent), color-mix(in srgb, var(--color-3) 64%, transparent) 42%, color-mix(in srgb, var(--color-3) 72%, transparent) 75%, var(--color-3)); }
+  #hero .op-ring { width: 120cqw; margin: -60cqw 0 0 -70cqw; top: 46%; }
+  #hero .op-ring__orb { width: 9cqw; margin: -4.5cqw 0 0 -4.5cqw; }
+  #hero .op-title { top: 30%; left: 6%; font-size: 15.5cqw; }
+  #hero .op-line { font-size: min(1em, calc(88cqw / (var(--len) * .52))); }
+  #hero .op-line--2 { margin-left: 1.3em; }
+  #hero .op-line--3 { margin-left: .6em; }
+  #hero .op-meta { left: var(--space-1); width: auto; gap: 18px; }
+  #hero .op-s2 { padding-top: 76px; }
+  #hero .op-card { width: 100%; min-height: calc(100svh - 76px - var(--space-2)); }
+  #hero .op-title2 { font-size: min(19cqw, calc(92cqw / (var(--len) * .5))); }
+  #hero .op-card { padding-bottom: 44px; }
+  #hero .op-orb { width: 62vw; right: -22%; top: 19%; }
+  #hero .op-chip { font-size: 64px; left: var(--space-1); top: 30%; }
+  #hero .op-cols { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes op-frame-in { from { clip-path: inset(3% 2.5% 3% 2.5%); } to { clip-path: inset(0); } }
+  @keyframes op-line-in { from { transform: translateX(-.45em); } to { transform: none; } }
+  @keyframes op-orbit { to { transform: rotate(360deg); } }
+  @keyframes op-pan { from { transform: scale(1.04) translateX(0); } to { transform: scale(1.12) translateX(-3%); } }
+  #hero .op-frame { animation: op-frame-in 1s cubic-bezier(.2, .7, .1, 1) backwards; }
+  #hero .op-line__in { animation: op-line-in 1s cubic-bezier(.2, .7, .1, 1) backwards; }
+  #hero .op-line--2 .op-line__in { animation-delay: .08s; }
+  #hero .op-line--3 .op-line__in { animation-delay: .16s; }
+  #hero .op-ring { animation: op-orbit 26s linear infinite; }
+  #hero .op-photo img { animation: op-pan 9s ease-in-out infinite alternate; }
+  #hero .op-s1[data-paused] .op-ring, #hero .op-s1[data-paused] .op-photo img { animation-play-state: paused; }
+}
+}
+</style>
+<style data-module="section:culture">
+@layer sections {
+#culture { position: relative; overflow: hidden; }
+#culture .mt-slide { width: min(100%, 1180px); margin-left: auto; display: grid; grid-template-columns: minmax(240px, 30%) 1fr; min-height: 620px; }
+#culture .mt-side { position: relative; overflow: hidden; padding: var(--space-1); display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(165deg, var(--color-8), var(--color-4)); }
+#culture .mt-orb { position: absolute; width: 54%; left: 30%; top: 6%; }
+#culture .mt-steps { position: relative; display: grid; gap: 22px; }
+#culture .mt-steps li { display: grid; grid-template-columns: 30px 1fr; gap: 6px 10px; }
+#culture .mt-num { grid-row: span 2; padding-top: 5px; color: var(--color-6); }
+#culture .mt-steps .m-text { color: var(--color-6); font-size: 15px; }
+#culture .mt-main { padding: calc(var(--space-1) + 12px) var(--space-1) var(--space-1) clamp(24px, 4vw, 64px); display: grid; grid-template-rows: 1fr auto; gap: 48px; }
+#culture .mt-title { font-size: clamp(34px, 6.1vw, 92px); }
+#culture .mt-row { display: block; white-space: nowrap; }
+#culture .mt-row:nth-child(2) { padding-left: 1.3em; }
+#culture .mt-row:nth-child(3) { padding-left: .55em; }
+#culture .mt-gap { display: inline-flex; align-items: center; justify-content: center; vertical-align: -0.06em; width: 1.05em; margin: 0 0.08em; line-height: 1; }
+#culture .mt-chip { width: 0.88em; height: 0.88em; aspect-ratio: 1; border-radius: 50%; object-fit: cover; display: block; vertical-align: middle; will-change: transform, opacity; }
+#culture .mt-after { display: inline-block; will-change: transform; }
+#culture .mt-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px 40px; }
+#culture .mt-foot .m-text-5 { max-width: 470px; }
+@media (max-width: 860px) {
+  #culture .mt-slide { grid-template-columns: 1fr; min-height: 0; }
+  #culture .mt-side { order: 2; padding-top: 140px; }
+  #culture .mt-orb { width: 120px; left: auto; right: var(--space-1); top: var(--space-1); }
+  #culture .mt-title { font-size: clamp(28px, 8.2vw, 56px); }
+  #culture .mt-main { padding: 36px var(--space-1) var(--space-1); gap: 32px; }
+  #culture .mt-foot { flex-direction: column; align-items: flex-start; }
+}
+}
+</style>
+<style data-module="section:capabilities">
+@layer sections {
+#capabilities .ds-slide { padding: var(--space-1); container-type: inline-size; }
+#capabilities .ds-title { display: flex; justify-content: space-between; gap: .3em; padding: 18px 0 clamp(28px, 4vw, 56px); font-size: min(9.6cqw, calc(88cqw / (var(--len) * .34))); }
+#capabilities .ds-grid {
+  position: relative; display: grid; gap: clamp(10px, 1.3vw, 18px);
+  grid-template-columns: repeat(6, 1fr); grid-auto-rows: clamp(110px, 11.5vw, 150px);
+  grid-template-areas:
+    "lift mark run run copy ride"
+    "swim swim run run copy ride"
+    "swim swim run run kit ride"
+    "note note court court link .";
+}
+#capabilities .ds-tile { position: relative; overflow: hidden; background: var(--color-8); }
+#capabilities .ds-tile img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.45) contrast(1.04); }
+#capabilities .ds-tile .m-badge { position: absolute; left: 10px; bottom: 10px; }
+#capabilities .ds-tile--lift { grid-area: lift; }
+#capabilities .ds-tile--mark { grid-area: mark; display: grid; place-items: center; color: var(--color-6); }
+#capabilities .ds-tile--mark svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.2; fill: none; }
+#capabilities .ds-tile--run { grid-area: run; }
+#capabilities .ds-tile--ride { grid-area: ride; }
+#capabilities .ds-tile--swim { grid-area: swim; }
+#capabilities .ds-tile--kit { grid-area: kit; }
+#capabilities .ds-tile--court { grid-area: court; }
+#capabilities .ds-tile--link { grid-area: link; display: grid; align-content: space-between; padding: 14px; background: color-mix(in srgb, var(--color-5) 35%, var(--color-8)); }
+#capabilities .ds-tile--link svg { width: 52px; height: 52px; stroke: var(--color-2); stroke-width: 1; fill: none; }
+#capabilities .ds-copy { grid-area: copy; display: grid; align-content: start; gap: 12px; padding-top: 4px; position: relative; z-index: 9; background: var(--color-1); }
+#capabilities .ds-copy .m-text { font-size: 14px; color: var(--color-6); }
+#capabilities .ds-note { grid-area: note; align-self: end; max-width: 380px; }
+@media (hover: hover) { #capabilities .ds-tile--link:hover { background: var(--color-5); } }
+@media (max-width: 860px) {
+  #capabilities .ds-title { flex-wrap: wrap; justify-content: flex-start; gap: 0 .3em; font-size: 15cqw; }
+  #capabilities .ds-grid {
+    grid-template-columns: 1fr 1fr; grid-auto-rows: 118px;
+    grid-template-areas: "run run" "run run" "lift mark" "swim swim" "ride kit" "ride link" "court court" "copy copy" "note note";
+  }
+  #capabilities .ds-copy, #capabilities .ds-note { padding-top: 12px; }
+  #capabilities .ds-grid > .ds-copy, #capabilities .ds-grid > .ds-note { grid-row: auto; }
+}
+}
+</style>
+<style data-module="section:leadership">
+@layer sections {
+#leadership .co-slide { width: min(100%, 1120px); padding: var(--space-1); overflow: hidden; }
+#leadership .co-ring { position: absolute; width: min(620px, 70vw); right: -12%; top: -18%; pointer-events: none; }
+#leadership .co-ring circle { fill: none; stroke: var(--color-5); stroke-width: 1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 0; }
+#leadership .co-head { position: relative; display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px 48px; align-items: end; padding: 18px 0 clamp(36px, 5vw, 72px); }
+#leadership .co-head .m-text-5 { color: var(--color-6); }
+#leadership .co-list { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 2vw, 28px); align-items: start; }
+#leadership .co-person:nth-child(2) { margin-top: 72px; }
+#leadership .co-person:nth-child(3) { margin-top: 24px; }
+#leadership .co-person:nth-child(4) { margin-top: 112px; }
+#leadership .co-photo { overflow: hidden; aspect-ratio: 3 / 4; background: var(--color-8); }
+#leadership .co-person:nth-child(2) .co-photo { aspect-ratio: 3 / 4.6; }
+#leadership .co-person:nth-child(3) .co-photo { aspect-ratio: 1 / 1.1; }
+#leadership .co-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+#leadership .co-person:nth-child(3) .co-photo img { object-position: 50% 12%; }
+#leadership figcaption { display: grid; gap: 4px; padding-top: 12px; }
+#leadership figcaption .m-text-4 { color: var(--color-6); }
+@media (max-width: 860px) {
+  #leadership .co-head { grid-template-columns: 1fr; }
+  #leadership .co-list { grid-template-columns: 1fr 1fr; }
+  #leadership .co-person:nth-child(2) { margin-top: 48px; }
+  #leadership .co-person:nth-child(3) { margin-top: 0; }
+  #leadership .co-person:nth-child(4) { margin-top: 48px; }
+}
+}
+</style>
+<style data-module="section:process">
+@layer sections {
+#process .lb-slide { width: min(100%, 1180px); margin-left: auto; padding: var(--space-1); display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 32px; align-items: center; }
+#process .lb-text { display: grid; gap: 22px; align-content: start; justify-items: start; padding: 18px 0; }
+#process .lb-text .m-text { color: var(--color-5); max-width: 420px; }
+#process .lb-stage { position: relative; width: min(100%, 640px); justify-self: center; aspect-ratio: 1; container-type: inline-size; }
+#process .lb-lens { position: absolute; inset: 20cqw; overflow: hidden; clip-path: circle(50% at 50% 50%); }
+#process .lb-lens img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; filter: saturate(.5); }
+#process .lb-ring { position: absolute; inset: 4cqw; width: 92cqw; height: 92cqw; overflow: visible; }
+#process .lb-ring circle { fill: none; stroke: color-mix(in srgb, var(--color-1) 35%, transparent); stroke-width: 1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 0; }
+#process .lb-note {
+  position: absolute; left: 50%; top: 50%; width: 30cqw; padding: 10px 12px; display: grid; gap: 4px;
+  background: var(--color-3); transform-origin: 0 0;
+  transform: rotate(var(--a)) translateX(46cqw) rotate(calc(var(--a) * -1)) translate(-50%, -50%);
+}
+#process .lb-note .m-text-6 { font-size: clamp(17px, 1.6vw, 22px); }
+#process .lb-note .m-text-4 { color: var(--color-5); }
+@media (max-width: 860px) {
+  #process .lb-slide { grid-template-columns: 1fr; }
+  #process .lb-stage { width: 100%; aspect-ratio: auto; display: grid; gap: 16px; }
+  #process .lb-lens { position: relative; inset: auto; width: 76cqw; aspect-ratio: 1; margin: 12cqw auto; }
+  #process .lb-ring { inset: 0 auto auto 4cqw; }
+  #process .lb-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  #process .lb-note { position: static; width: auto; transform: none; padding: 12px 0 0; border-top: 1px solid color-mix(in srgb, var(--color-1) 30%, transparent); }
+}
+}
+</style>
+<style data-module="section:growth">
+@layer sections {
+#growth { padding-inline: 0; }
+#growth .wk-stage { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 4vw, 48px); padding: 84px 0 var(--space-2); min-height: 100svh; align-content: center; }
+#growth .wk-head { padding-inline: var(--space-2); display: grid; grid-template-columns: 1fr minmax(0, 460px); gap: 20px 48px; align-items: end; }
+#growth .wk-view { min-width: 0; overflow-x: auto; padding-inline: var(--space-2); }
+#growth[data-scrubbed] { height: var(--wk-height, auto); }
+#growth[data-scrubbed] .wk-stage { position: sticky; top: 0; }
+#growth[data-scrubbed] .wk-view { overflow: visible; }
+#growth .wk-track { display: flex; gap: clamp(12px, 1.6vw, 24px); width: max-content; padding-bottom: 8px; }
+#growth .wk-day { width: clamp(250px, 24vw, 330px); min-height: clamp(360px, 46vh, 440px); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+#growth .wk-day--rest { background: var(--color-8); }
+#growth .wk-name { color: var(--color-6); }
+#growth .wk-photo { margin-top: auto; overflow: hidden; aspect-ratio: 16 / 10; }
+#growth .wk-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.45); }
+#growth .wk-day .m-text { color: var(--color-6); font-size: 15px; }
+#growth .wk-time { color: var(--color-2); }
+#growth .wk-progress { margin-inline: var(--space-2); height: 1px; background: color-mix(in srgb, var(--color-2) 18%, transparent); }
+#growth .wk-progress span { display: block; height: 100%; background: var(--color-2); transform-origin: 0 50%; }
+@media (max-width: 860px) {
+  #growth .wk-head { grid-template-columns: 1fr; }
+  #growth .wk-day { width: 78vw; min-height: 380px; }
+}
+}
+</style>
+<style data-module="section:heritage">
+@layer sections {
+#heritage .st-slide { width: min(100%, 1040px); padding: var(--space-1); display: grid; gap: clamp(36px, 5vw, 72px); }
+#heritage .st-label { padding-top: 6px; color: var(--color-6); }
+#heritage .st-chip { display: inline-block; font-size: 1.15em; vertical-align: -.26em; margin-right: .12em; }
+#heritage .st-main { display: grid; gap: 20px; max-width: 900px; }
+#heritage .st-main figcaption { color: var(--color-6); }
+#heritage .st-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; max-width: 760px; margin-left: auto; padding-top: 24px; border-top: 1px solid var(--color-5); }
+#heritage .st-notes li { display: grid; gap: 8px; }
+#heritage .st-notes .m-text-4 { color: var(--color-6); }
+@media (max-width: 860px) { #heritage .st-notes { grid-template-columns: 1fr; } }
+}
+</style>
+<style data-module="section:foundations">
+@layer sections {
+#foundations .rc-slide { padding: var(--space-1); display: grid; grid-template-columns: 1fr minmax(0, 520px); gap: clamp(28px, 4vw, 64px); }
+#foundations .rc-text { display: grid; gap: 28px; align-content: start; padding-top: 18px; }
+#foundations .rc-row { display: block; }
+#foundations .rc-row:nth-child(2) { padding-left: 1.2em; }
+#foundations .rc-row:nth-child(3) { padding-left: .6em; }
+#foundations .rc-text .m-text-5 { max-width: 520px; color: var(--color-6); }
+#foundations .rc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; max-width: 620px; }
+#foundations .rc-list li { display: grid; gap: 4px; padding-top: 14px; border-top: 1px solid var(--color-5); }
+#foundations .rc-list .m-text { color: var(--color-6); font-size: 15px; }
+#foundations .rc-window { position: relative; overflow: hidden; aspect-ratio: 4 / 5; align-self: stretch; }
+#foundations .rc-sky { position: absolute; inset: 0 0 40% 0; overflow: hidden; background: var(--color-3); }
+#foundations .rc-cool { position: absolute; inset: 0; background: linear-gradient(180deg, var(--color-5), var(--color-8)); }
+#foundations .rc-sun { position: absolute; width: 46%; left: 27%; bottom: 0; translate: 0 46%; }
+#foundations .rc-sea { position: absolute; inset: 60% 0 0 0; }
+#foundations .rc-sea img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; filter: saturate(.6); }
+@media (max-width: 860px) {
+  #foundations .rc-slide { grid-template-columns: 1fr; }
+  #foundations .rc-window { aspect-ratio: 1; order: -1; }
+  #foundations .rc-list { grid-template-columns: 1fr; }
+}
+}
+</style>
+<style data-module="section:models">
+@layer sections {
+#models .mb-slide { width: min(100%, 1180px); margin-left: auto; padding: var(--space-1); overflow: hidden; }
+#models .mb-ring { position: absolute; width: min(560px, 80vw); left: -14%; bottom: -30%; pointer-events: none; }
+#models .mb-ring circle { fill: none; stroke: var(--color-5); stroke-width: 1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 0; }
+#models .mb-head { position: relative; display: grid; grid-template-columns: 1fr minmax(0, 440px); gap: 20px 48px; align-items: end; padding: 18px 0 clamp(32px, 4vw, 56px); }
+#models .mb-head .m-text-5 { color: var(--color-6); }
+#models .mb-plans { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--color-5); }
+#models .mb-plan { display: flex; flex-direction: column; gap: 18px; padding: 24px; background: var(--color-1); }
+#models .mb-plan + .mb-plan { border-left: 1px solid var(--color-5); }
+#models .mb-plan--featured { background: var(--color-3); color: var(--color-1); border-left-color: var(--color-3); }
+#models .mb-plan--featured :focus-visible { outline-color: var(--color-1); }
+#models .mb-price { display: flex; align-items: baseline; gap: 8px; }
+#models .mb-price .m-text-3 { font-size: clamp(36px, 3.6vw, 52px); line-height: 1; }
+#models .mb-for { color: var(--color-6); }
+#models .mb-plan--featured .mb-for { color: var(--color-5); }
+#models .mb-inc { display: grid; margin-bottom: auto; }
+#models .mb-inc li { padding: 10px 0; border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); font-size: 15px; }
+#models .mb-plan .m-btn, #models .mb-plan .m-btn-2 { align-self: flex-start; }
+@media (max-width: 860px) {
+  #models .mb-head { grid-template-columns: 1fr; }
+  #models .mb-plans { grid-template-columns: 1fr; }
+  #models .mb-plan + .mb-plan { border-left: 0; border-top: 1px solid var(--color-5); }
+}
+}
+</style>
+<style data-module="section:faq">
+@layer sections {
+#faq .fq-slide { width: min(100%, 1080px); padding: var(--space-1); }
+#faq .fq-head { display: grid; grid-template-columns: 1fr minmax(0, 400px); gap: 20px 48px; align-items: end; padding: 18px 0 clamp(32px, 4vw, 56px); }
+#faq .fq-head .m-text { color: var(--color-6); }
+#faq .fq-body { display: grid; grid-template-columns: clamp(36px, 5vw, 72px) 1fr; gap: clamp(16px, 3vw, 40px); }
+#faq .fq-rail { position: relative; justify-self: center; width: 1px; background: var(--color-5); }
+#faq .fq-ball { position: absolute; left: 50%; top: 0; width: clamp(30px, 3.4vw, 44px); margin-left: calc(clamp(30px, 3.4vw, 44px) / -2); }
+#faq .fq-ball::after { content: ""; position: absolute; inset: 10%; border-radius: 50%; border: 1.5px solid var(--color-1); border-left-color: transparent; border-right-color: transparent; }
+#faq .fq-list { border-top: 1px solid var(--color-5); }
+#faq .fq-item { border-bottom: 1px solid var(--color-5); }
+#faq .fq-item summary { list-style: none; display: flex; justify-content: space-between; gap: 24px; padding: 20px 0; cursor: pointer; }
+#faq .fq-item summary::-webkit-details-marker { display: none; }
+#faq .fq-item summary::after { content: ""; flex: none; width: 13px; height: 13px; margin-top: .4em; background: linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat, linear-gradient(currentColor, currentColor) center / 1px 100% no-repeat; transition: transform .3s; }
+#faq .fq-item[open] summary::after { transform: rotate(45deg); }
+#faq .fq-item .m-text { max-width: 640px; padding-bottom: 22px; color: var(--color-6); }
+@media (max-width: 860px) { #faq .fq-head { grid-template-columns: 1fr; } #faq .fq-body { grid-template-columns: 28px 1fr; gap: 14px; } #faq .fq-ball { width: 26px; margin-left: -13px; } }
+}
+</style>
+<style data-module="section:contact">
+@layer sections {
+#contact .ct-slide { padding: var(--space-1); }
+#contact .ct-run { position: relative; display: flex; justify-content: flex-end; padding: 18px 0 18px; }
+#contact .ct-title { font-size: clamp(38px, 7.4vw, 112px); white-space: nowrap; }
+#contact .ct-line { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--color-2); transform-origin: 0 50%; }
+#contact .ct-grid { display: grid; grid-template-columns: 1fr minmax(0, 560px); gap: 40px 64px; padding-top: clamp(32px, 4vw, 56px); }
+#contact .ct-info { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; align-content: start; }
+#contact .ct-info dt { color: var(--color-6); margin-bottom: 6px; }
+#contact .ct-info dd { margin: 0; }
+#contact .ct-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+#contact .ct-form .ct-wide, #contact .ct-form .ct-send { grid-column: 1 / -1; }
+#contact .ct-send { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+#contact .ct-status { color: var(--color-6); }
+@media (max-width: 860px) {
+  #contact .ct-title { font-size: 10vw; }
+  #contact .ct-grid, #contact .ct-info, #contact .ct-form { grid-template-columns: 1fr; }
+}
+}
+</style>
+<style data-module="section:footer">
+@layer sections {
+#footer { padding: var(--space-3) var(--space-2) var(--space-2); }
+#footer .ft-slide { padding: var(--space-1); container-type: inline-size; overflow: hidden; }
+#footer .ft-word { display: block; pointer-events: none; width: max-content; max-width: 100%; padding: 18px 0 clamp(28px, 4vw, 56px); font-size: calc(92cqw / (var(--len) * .55)); line-height: .8; white-space: nowrap; }
+#footer .ft-cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px 32px; padding-top: 24px; border-top: 1px solid color-mix(in srgb, var(--color-1) 25%, transparent); }
+#footer .ft-cols .m-text, #footer .ft-cols .m-text-4 { color: var(--color-5); }
+#footer .ft-cols ul { display: grid; gap: 8px; align-content: start; }
+#footer .ft-legal { align-self: end; }
+@media (max-width: 860px) { #footer .ft-cols { grid-template-columns: 1fr 1fr; } #footer .ft-cols > .m-text { grid-column: 1 / -1; } }
+}
+</style>
+</head>
+<body>
+<!-- navigation: top bar: wordmark, a short tagline, section links, Start the Conversation button; phone menu overlay -->
+<header id="navigation" data-section="navigation">
+  <div class="nav__bar">
+    <a class="nav__logo" href="#hero" aria-label="Edish Connect, back to the top">edish connect</a>
+    <p class="nav__line m-text-4">Where Engineering Meets Inspiration</p>
+    <nav aria-label="Main">
+      <ul class="nav__links" data-items=":scope > li">
+        <li><a class="m-link" href="#culture">Philosophy</a></li>
+        <li><a class="m-link" href="#capabilities">Models</a></li>
+        <li><a class="m-link" href="#process">Capabilities</a></li>
+        <li><a class="m-link" href="#growth">Delivery</a></li>
+        <li><a class="m-link" href="#foundations">Why Edish</a></li>
+        <li><a class="m-link" href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="m-btn nav__cta" href="#contact"><span class="m-btn__label">Start the Conversation</span></a>
+    <button class="m-iconbtn nav__menu" type="button" aria-expanded="false" aria-controls="menu"><span class="sr-only">Open the menu</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></svg></button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <button class="m-iconbtn menu__close" type="button"><span class="sr-only">Close the menu</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <nav aria-label="Menu">
+      <ul class="menu__links" data-items=":scope > li">
+        <li><a class="m-text-3" href="#culture">Philosophy</a></li>
+        <li><a class="m-text-3" href="#capabilities">Models</a></li>
+        <li><a class="m-text-3" href="#process">Capabilities</a></li>
+        <li><a class="m-text-3" href="#growth">Delivery</a></li>
+        <li><a class="m-text-3" href="#foundations">Why Edish</a></li>
+        <li><a class="m-text-3" href="#faq">FAQ</a></li>
+        <li><a class="m-text-3" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="m-btn-2 menu__cta" href="#contact"><span class="m-btn__label">Start the Conversation</span></a>
+  </div>
+</header>
+<main>
+<!-- hero: two-screen opening: a navy cover slide with a photo and a three-line stepped headline, then a pale manifesto slide (animation: scene:hero) -->
+<section id="hero" data-section="hero" aria-labelledby="hero-title">
+  <div class="op-s1">
+    <div class="op-ground" aria-hidden="true"></div>
+    <div class="op-frame">
+      <div class="op-slide m-slide-2">
+        <div class="op-photo"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f580?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Abstract microchip precision circuitry in engineering navy" width="1600" height="1025" fetchpriority="high"></div>
+        <div class="op-ring" aria-hidden="true"><span class="op-ring__orb m-orb"></span></div>
+        <h1 class="op-title m-text-2" id="hero-title">
+          <span class="op-line op-line--1" style="--len:8"><span class="op-line__in">We build</span></span>
+          <span class="op-line op-line--2" style="--len:11"><span class="op-line__in">engineering</span></span>
+          <span class="op-line op-line--3" style="--len:10"><span class="op-line__in">capability</span></span>
+        </h1>
+        <div class="op-meta">
+          <p class="m-text-5">Edish Connect partners with engineering leaders to build product, platform and AI capability inside their organizations — not to staff a project and step away.</p>
+          <div class="op-actions">
+            <a class="m-btn-2" href="#contact"><span class="m-btn__label">Start the Conversation</span></a>
+            <a class="m-link" href="#capabilities">See Engineering Models</a>
+          </div>
+        </div>
+        <div class="op-dim" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+  <div class="op-s2">
+    <div class="op-card m-slide-3">
+      <h2 class="op-title2 m-text-2" style="--len:27">Two forces, one discipline.</h2>
+      <span class="op-orb m-orb" aria-hidden="true"></span>
+      <img class="op-chip m-chip" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80" alt="Portrait of an engineering leader" width="400" height="400" loading="lazy">
+      <div class="op-cols">
+        <p class="m-text"><strong>Engineering (The E):</strong> Precision, execution, craftsmanship, systems thinking, and production reliability.</p>
+        <p class="m-text"><strong>Inspiration (The I):</strong> Curiosity, innovation, ideas, growth, and human potential. Engineering without inspiration creates systems; inspiration without engineering creates ideas. Together, they build the future.</p>
+        <a class="m-link" href="#culture">Explore our philosophy</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- culture: how it works: three numbered steps beside a big heading with round photos set into its lines (animation: scene:culture) -->
+<section id="culture" class="l-sec" data-section="culture" aria-labelledby="culture-title">
+  <div class="mt-slide m-slide">
+    <div class="mt-side">
+      <span class="mt-orb m-orb" aria-hidden="true"></span>
+      <ol class="mt-steps" data-items=":scope > li" data-fixed="3" data-motion="rise" data-enter="86%">
+        <li><span class="mt-num m-text-4">01</span><h3 class="m-text-6">Precision</h3><p class="m-text">Systems thinking from day one. Conversations start with your architecture and constraints, not a rate card.</p></li>
+        <li><span class="mt-num m-text-4">02</span><h3 class="m-text-6">Execution</h3><p class="m-text">Senior engineers who have owned distributed systems in production, embedded directly into your workflows.</p></li>
+        <li><span class="mt-num m-text-4">03</span><h3 class="m-text-6">Retention</h3><p class="m-text">We measure success by capability retained inside your organization, not hours billed or tickets closed.</p></li>
+      </ol>
+    </div>
+    <div class="mt-main">
+      <h2 class="mt-title m-text-3" id="culture-title">
+        <span class="mt-row">Built <span class="mt-gap"><img class="mt-chip m-chip" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=40&amp;h=40&amp;q=80" alt="" width="240" height="240" loading="lazy"></span> <span class="mt-after">to scale.</span></span>
+        <span class="mt-row">Owned <span class="mt-gap"><img class="mt-chip m-chip" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=40&amp;h=40&amp;q=80" alt="" width="240" height="240" loading="lazy"></span> <span class="mt-after">by</span></span>
+        <span class="mt-row">your team. <span class="mt-gap"><img class="mt-chip m-chip" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=40&amp;h=40&amp;q=80" alt="" width="240" height="240" loading="lazy"></span></span>
+      </h2>
+      <div class="mt-foot">
+        <p class="m-text-5">Every engagement starts with your real architectural constraints and ends with lasting leverage. You see the progress in code you own, not in slide decks.</p>
+        <a class="m-btn" href="#capabilities"><span class="m-btn__label">Explore Engineering Models</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- capabilities: a three-word line over a collage of tiles, one per activity, plus a link tile (animation: scene:capabilities) -->
+<section id="capabilities" class="l-sec" data-section="capabilities" aria-labelledby="capabilities-title">
+  <div class="ds-slide m-slide">
+    <h2 class="ds-title m-text-3" id="capabilities-title" style="--len:26" data-motion="streak"><span>Architect.</span> <span>Execute.</span> <span>Scale.</span></h2>
+    <div class="ds-grid" data-items=":scope > .ds-tile" data-fixed="8">
+      <figure class="ds-tile ds-tile--lift" style="--capabilities-tilt: -8deg"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Senior engineer writing code on high-resolution display" width="600" height="636" loading="lazy"><figcaption class="m-badge">Staff Augmentation</figcaption></figure>
+      <div class="ds-tile ds-tile--mark" aria-hidden="true" style="--capabilities-tilt: 5deg"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></div>
+      <figure class="ds-tile ds-tile--run" style="--capabilities-tilt: -3deg"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Engineering pod collaborating on systems design" width="900" height="1350" loading="lazy"><figcaption class="m-badge">Dedicated Teams</figcaption></figure>
+      <div class="ds-copy">
+        <p class="m-text">Six ways to build engineering capability — not six ways to hire. Every organization builds capability differently; these models meet your team at its current maturity stage.</p>
+        <p class="m-text">From rapid capacity injection to full global capability centers with built-in governance, compliance, and engineering craft.</p>
+      </div>
+      <figure class="ds-tile ds-tile--ride" style="--capabilities-tilt: 9deg"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Modern global engineering campus building" width="600" height="750" loading="lazy"><figcaption class="m-badge">Offshore Center (ODC)</figcaption></figure>
+      <figure class="ds-tile ds-tile--swim" style="--capabilities-tilt: -6deg"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Enterprise engineering operations floor" width="900" height="506" loading="lazy"><figcaption class="m-badge">Global Center (GCC)</figcaption></figure>
+      <figure class="ds-tile ds-tile--kit" style="--capabilities-tilt: 3deg"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Architectural blueprint and systems design handover" width="500" height="469" loading="lazy"><figcaption class="m-badge">Build-Operate-Transfer</figcaption></figure>
+      <figure class="ds-tile ds-tile--court" style="--capabilities-tilt: -10deg"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Lead engineer monitoring production systems" width="900" height="1013" loading="lazy"><figcaption class="m-badge">Managed Teams</figcaption></figure>
+      <a class="ds-tile ds-tile--link" href="#growth" style="--capabilities-tilt: 6deg"><svg aria-hidden="true" viewBox="0 0 52 52"><circle cx="26" cy="26" r="25"/><path d="M18 26h16M28 20l6 6-6 6"/></svg><span class="m-text-4">See how we deliver</span></a>
+      <p class="ds-note m-text-6">Fastest to start or full strategic scale — every model is structured for sustainable engineering velocity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- leadership: four coach portraits of different heights with names and roles -->
+<section id="leadership" class="l-sec" data-section="leadership" aria-labelledby="leadership-title">
+  <div class="co-slide m-slide-3">
+    <svg class="co-ring" data-motion="orbit" viewBox="0 0 400 400" aria-hidden="true" data-items=":scope > circle"><circle cx="200" cy="200" r="199" pathLength="1"/><circle cx="200" cy="200" r="140" pathLength="1"/></svg>
+    <div class="co-head">
+      <h2 class="m-text-3" id="leadership-title" data-motion="streak">Led by engineers who have run production systems</h2>
+      <p class="m-text-5">Every practice lead has owned distributed systems under scale, managed architectural debt, and shipped enterprise software. You collaborate directly with practitioners.</p>
+    </div>
+    <ul class="co-list" data-items=":scope > li">
+      <li class="co-person"><figure><div class="co-photo"><img data-motion="focus" data-enter="85%" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=600&amp;h=750&amp;q=80" alt="Portrait of Alex Rivera, AI and Data Engineering Practice Lead" width="600" height="750" loading="lazy"></div><figcaption><strong class="m-text-6">Alex Rivera</strong><span class="m-text-4">Practice Lead · AI &amp; Data Engineering</span></figcaption></figure></li>
+      <li class="co-person"><figure><div class="co-photo"><img data-motion="focus" data-enter="85%" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=600&amp;h=900&amp;q=80" alt="Portrait of Elena Rostova, VP Architecture" width="600" height="900" loading="lazy"></div><figcaption><strong class="m-text-6">Elena Rostova</strong><span class="m-text-4">VP Architecture · Platform &amp; Cloud</span></figcaption></figure></li>
+      <li class="co-person"><figure><div class="co-photo"><img data-motion="focus" data-enter="85%" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=600&amp;h=900&amp;q=80" alt="Portrait of Karthik Menon, Principal Architect" width="600" height="900" loading="lazy"></div><figcaption><strong class="m-text-6">Karthik Menon</strong><span class="m-text-4">Principal Architect · Product Engineering</span></figcaption></figure></li>
+      <li class="co-person"><figure><div class="co-photo"><img data-motion="focus" data-enter="85%" src="https://images.unsplash.com/photo-1573497019940-1c28c88c4f3e?auto=format&amp;fit=crop&amp;w=600&amp;h=900&amp;q=80" alt="Portrait of Sofia Chen, Director of Global Capability Centers" width="600" height="900" loading="lazy"></div><figcaption><strong class="m-text-6">Sofia Chen</strong><span class="m-text-4">Director · Global Capability Centers (GCC)</span></figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<!-- process: a feature block: text on the left, a round photo ringed by four labelled measures on the right (animation: scene:process) -->
+<section id="process" class="l-sec" data-section="process" aria-labelledby="process-title">
+  <div class="lb-slide m-slide-2">
+    <div class="lb-text">
+      <h2 class="m-text-3" id="process-title">What we build, and what it earns you</h2>
+      <p class="m-text-5">Six foundational capabilities built to withstand production reality. Architected for change, auditability, and long-term leverage.</p>
+      <p class="m-text">From moving generative AI from sandbox demo to resilient production inference, to building internal developer platforms that turn engineering effort into leverage across every squad.</p>
+      <a class="m-link" href="#contact">Speak with an engineering lead</a>
+    </div>
+    <div class="lb-stage">
+      <div class="lb-lens"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=880&amp;q=80" alt="High performance enterprise cloud server infrastructure" width="900" height="600" loading="lazy"></div>
+      <svg class="lb-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.5" pathLength="1"/></svg>
+      <ul class="lb-notes" data-items=":scope > li" data-fixed="4">
+        <li class="lb-note" style="--a:-38deg"><strong class="m-text-6">Product Engineering</strong><span class="m-text-4">Architected for change and uptime</span></li>
+        <li class="lb-note" style="--a:38deg"><strong class="m-text-6">AI Engineering</strong><span class="m-text-4">Moving models from pilot to production</span></li>
+        <li class="lb-note" style="--a:142deg"><strong class="m-text-6">Platform &amp; Cloud</strong><span class="m-text-4">Internal leverage across squads</span></li>
+        <li class="lb-note" style="--a:218deg"><strong class="m-text-6">Quality Engineering</strong><span class="m-text-4">Confidence in the CI/CD pipeline</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- growth: delivery cadence: growth stages in a row that runs sideways as you scroll, with a progress line (animation: scene:growth) -->
+<section id="growth" class="l-sec" data-section="growth" aria-labelledby="growth-title">
+  <div class="wk-stage">
+    <div class="wk-head">
+      <h2 class="m-text-3" id="growth-title" data-motion="streak">The Delivery Cadence</h2>
+      <p class="m-text-5">Structured for rapid momentum, rigorous quality, and clear visibility. Here is how an Edish Connect pod embeds into your engineering cadence.</p>
+    </div>
+    <div class="wk-view">
+      <ol class="wk-track" data-items=":scope > li" data-fixed="7">
+        <li class="wk-day m-slide"><h3 class="m-text-6">Stage 01</h3><p class="m-text-5">Architecture Audit</p><p class="m-text wk-time">Days 1–3 · Deep Dive</p><p class="m-text">We map your repositories, API contracts, latency budgets, and deployment constraints with your tech leads.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Software architecture flow diagrams and systems design" width="600" height="400" loading="lazy"></div></li>
+        <li class="wk-day m-slide"><h3 class="m-text-6">Stage 02</h3><p class="m-text-5">Pod Assembly</p><p class="m-text wk-time">Week 1 · Pod Selection</p><p class="m-text">Hand-picked senior engineers aligned to your exact technical stack, domain nuances, and timezone cadence.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Engineering team collaborating on product requirements" width="600" height="400" loading="lazy"></div></li>
+        <li class="wk-day m-slide"><h3 class="m-text-6">Stage 03</h3><p class="m-text-5">Embedded Kickoff</p><p class="m-text wk-time">Week 2 · First Commit</p><p class="m-text">Local environments configured, security clearances granted, and first pull requests opened within 48 hours.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Engineer workstation with active code editor" width="600" height="400" loading="lazy"></div></li>
+        <li class="wk-day m-slide"><h3 class="m-text-6">Stage 04</h3><p class="m-text-5">Continuous Delivery</p><p class="m-text wk-time">Ongoing · Daily Sprints</p><p class="m-text">Async standups, rigorous peer reviews, and automated integration tests ensure every commit meets your standard.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Clean code editor displaying backend syntax" width="600" height="400" loading="lazy"></div></li>
+        <li class="wk-day wk-day--rest m-slide"><h3 class="m-text-6">Stage 05</h3><p class="m-text-5">Platform Leverage</p><p class="m-text wk-time">Milestone · Foundations</p><p class="m-text">Creating reusable libraries, automated smoke suites, and CI/CD enhancements that lift velocity across all squads.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Cloud infrastructure and telemetry systems" width="600" height="400" loading="lazy"></div></li>
+        <li class="wk-day m-slide"><h3 class="m-text-6">Stage 06</h3><p class="m-text-5">Metrics &amp; Retros</p><p class="m-text wk-time">Bi-Weekly · Executive Sync</p><p class="m-text">Transparent reviews analyzing sprint velocity, code quality, and architectural progress against strategic KPIs.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Data telemetry analytics charts" width="600" height="400" loading="lazy"></div></li>
+        <li class="wk-day m-slide"><h3 class="m-text-6">Stage 07</h3><p class="m-text-5">Knowledge Transfer</p><p class="m-text wk-time">Continuous · Full Retention</p><p class="m-text">Comprehensive documentation, runbooks, and pair-shadowing ensure your internal team permanently owns the capability.</p><div class="wk-photo"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&amp;fit=crop&amp;w=600&amp;h=400&amp;q=80" alt="Engineers conducting a technical walkthrough" width="600" height="400" loading="lazy"></div></li>
+      </ol>
+    </div>
+    <div class="wk-progress" aria-hidden="true"><span></span></div>
+  </div>
+</section>
+
+<!-- heritage: testimonials: one large quote with a round portrait in its first line and two short quotes -->
+<section id="heritage" class="l-sec" data-section="heritage" aria-labelledby="heritage-title">
+  <div class="st-slide m-slide-3">
+    <h2 class="st-label m-text-6" id="heritage-title">Engineering leaders on real outcomes</h2>
+    <figure class="st-main">
+      <blockquote data-motion="streak" data-from="left"><p class="m-text-7"><img class="st-chip m-chip" data-motion="focus" data-enter="85%" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80" alt="Portrait of Marcus Vance, VP of Engineering" width="240" height="240" loading="lazy">“Edish Connect didn't just staff engineers — they diagnosed our database write-bottleneck in the first 48 hours, restructured our event pipelines, and left our internal squad ten times more confident in production releases.”</p></blockquote>
+      <figcaption class="m-text-4">Marcus Vance · VP of Engineering, Global SaaS Platform</figcaption>
+    </figure>
+    <ul class="st-notes" data-items=":scope > li" data-motion="rise" data-enter="86%">
+      <li><p class="m-text">“Their team moved our AI pilot into production without a single architectural rebuild. What took other vendors six months took Edish Connect three sprints.”</p><p class="m-text-4">Nadia Al-Mansoor · Head of AI, FinTech Enterprise</p></li>
+      <li><p class="m-text">“The BOT model allowed us to stand up a 25-person autonomous engineering unit in under 60 days without compromising on code quality or culture.”</p><p class="m-text-4">Julian Thorne · CTO, Logistics Technology Group</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- foundations: a stepped heading, a lead and four services in two columns, beside a window of sky over calm water (animation: scene:foundations) -->
+<section id="foundations" class="l-sec" data-section="foundations" aria-labelledby="foundations-title">
+  <div class="rc-slide m-slide">
+    <div class="rc-text">
+      <h2 class="m-text-3" id="foundations-title"><span class="rc-row">Capability</span> <span class="rc-row">is what</span> <span class="rc-row">remains</span></h2>
+      <p class="m-text-5">Anyone can bill hours. An engineering partner is evaluated by the velocity, architectural resilience, and autonomy your organization retains when the engagement concludes.</p>
+      <ul class="rc-list" data-items=":scope > li">
+        <li><strong class="m-text-6">Engineering-Led, Not Sales-Led</strong><span class="m-text">Conversations start with your systems architecture and constraints, never with an aggressive sales rate card.</span></li>
+        <li><strong class="m-text-6">Senior Engineers, Not Résumés</strong><span class="m-text">Specialists who have carried the pager, debugged live outages, and maintained complex systems in production.</span></li>
+        <li><strong class="m-text-6">Systems Thinking from Day One</strong><span class="m-text">We analyze whole systems, dependencies, and team dynamics before proposing code modifications.</span></li>
+        <li><strong class="m-text-6">Retained Organizational Capability</strong><span class="m-text">Every architectural pattern, CI/CD pipeline, and workflow is documented and permanently owned by you.</span></li>
+      </ul>
+    </div>
+    <div class="rc-window">
+      <div class="rc-sky" aria-hidden="true"><div class="rc-cool"></div><span class="rc-sun m-orb"></span></div>
+      <div class="rc-sea"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&amp;fit=crop&amp;w=900&amp;h=600&amp;q=80" alt="Calm open water surface reflecting sky, representing production resilience and calm" width="900" height="600" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- models: pricing: three plans in ruled columns, the middle one highlighted -->
+<section id="models" class="l-sec" data-section="models" aria-labelledby="models-title">
+  <div class="mb-slide m-slide">
+    <svg class="mb-ring" data-motion="orbit" viewBox="0 0 400 400" aria-hidden="true" data-items=":scope > circle"><circle cx="200" cy="200" r="199" pathLength="1"/><circle cx="200" cy="200" r="150" pathLength="1"/></svg>
+    <div class="mb-head">
+      <h2 class="m-text-3" id="models-title" data-motion="streak">Engagement Models</h2>
+      <p class="m-text-5">Structured around your organization's maturity stage. Predictable engagement, zero lock-in, and 100% intellectual property ownership.</p>
+    </div>
+    <div class="mb-plans" data-items=":scope > .mb-plan" data-motion="rise" data-enter="86%">
+      <article class="mb-plan">
+        <h3 class="m-text-6">Staff Augmentation</h3>
+        <p class="mb-price"><strong class="m-text-3">Immediate</strong><span class="m-text-4">capacity</span></p>
+        <p class="mb-for m-text">Capacity without a hiring cycle.</p>
+        <ul class="mb-inc"><li class="m-text">Senior engineers embedded directly in your sprints</li><li class="m-text">Aligned to your tools, CI/CD, and git workflows</li><li class="m-text">Direct reporting into your engineering managers</li><li class="m-text">Rapid onboarding with zero lock-in</li></ul>
+        <a class="m-btn" href="#contact"><span class="m-btn__label">Start Augmentation</span></a>
+      </article>
+      <article class="mb-plan mb-plan--featured">
+        <h3 class="m-text-6">Dedicated Pods &amp; GCC</h3>
+        <p class="mb-price"><strong class="m-text-3">Strategic</strong><span class="m-text-4">scale</span></p>
+        <p class="mb-for m-text">Sustained delivery with operational depth.</p>
+        <ul class="mb-inc"><li class="m-text">Standing multidisciplinary engineering pod</li><li class="m-text">Structured around your product roadmap and milestones</li><li class="m-text">Full security, SOC2 compliance, and governance layer</li><li class="m-text">Clear pathway to full Global Capability Center (GCC)</li></ul>
+        <a class="m-btn-2" href="#contact"><span class="m-btn__label">Explore Dedicated Pods</span></a>
+      </article>
+      <article class="mb-plan">
+        <h3 class="m-text-6">Build-Operate-Transfer</h3>
+        <p class="mb-price"><strong class="m-text-3">Owned</strong><span class="m-text-4">outcome</span></p>
+        <p class="mb-for m-text">We build, stabilize, and transfer full ownership.</p>
+        <ul class="mb-inc"><li class="m-text">End-to-end accountability for milestones and architecture</li><li class="m-text">Complete operational setup, talent hiring, and vetting</li><li class="m-text">Seamless legal, IP, and asset transfer at maturity</li><li class="m-text">Post-transfer architectural advisory and support</li></ul>
+        <a class="m-btn" href="#contact"><span class="m-btn__label">Plan BOT Engagement</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- faq: questions and answers (native <details>) beside a rail with a rolling ball (animation: scene:faq) -->
+<section id="faq" class="l-sec" data-section="faq" aria-labelledby="faq-title">
+  <div class="fq-slide m-slide-3">
+    <div class="fq-head">
+      <h2 class="m-text-3" id="faq-title">Before we begin</h2>
+      <p class="m-text">Have specific architecture or staffing questions? Schedule a call and an engineering director will answer.</p>
+    </div>
+    <div class="fq-body">
+      <div class="fq-rail" aria-hidden="true"><span class="fq-ball m-orb"></span></div>
+      <div class="fq-list" data-items=":scope > details">
+        <details class="fq-item"><summary class="m-text-6">How quickly can an Edish Connect pod start committing code?</summary><p class="m-text">Most teams have senior engineers embedded in your standups and opening PRs within one to two weeks, following automated security vetting and repo onboarding.</p></details>
+        <details class="fq-item"><summary class="m-text-6">How do you evaluate and select engineers for our roadmap?</summary><p class="m-text">We evaluate candidates through deep system design reviews, production debugging scenarios, and domain matching. We present only senior practitioners who've owned similar systems in production.</p></details>
+        <details class="fq-item"><summary class="m-text-6">Who owns the intellectual property and code?</summary><p class="m-text">You own 100% of all intellectual property, source code, architectural documentation, and infrastructure scripts from the first commit. Everything lives directly in your repositories.</p></details>
+        <details class="fq-item"><summary class="m-text-6">How is Edish Connect different from traditional IT staffing?</summary><p class="m-text">Staffing agencies sell resumes and bill hours. We are an engineering growth company led by senior architects who provide technical oversight, architectural reviews, and delivery accountability.</p></details>
+        <details class="fq-item"><summary class="m-text-6">Can we transition from dedicated teams to BOT or GCC?</summary><p class="m-text">Yes. Many partners begin with an embedded pod to accelerate a release, then expand into a dedicated ODC or full Build-Operate-Transfer center as product lines mature.</p></details>
+        <details class="fq-item"><summary class="m-text-6">What does the initial architecture consultation involve?</summary><p class="m-text">You will speak directly with an engineering director, not an account executive. We will discuss your current architecture, bottlenecks, and roadmap to recommend the right model.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact: booking: a heading on a line across the slide, address, hours, phone, email and a short form (animation: scene:contact) -->
+<section id="contact" class="l-sec" data-section="contact" aria-labelledby="contact-title">
+  <div class="ct-slide m-slide">
+    <div class="ct-run">
+      <h2 class="ct-title m-text-3" id="contact-title">Start the conversation</h2>
+      <div class="ct-line" aria-hidden="true"></div>
+    </div>
+    <div class="ct-grid">
+      <dl class="ct-info">
+        <div><dt class="m-text-4">Global Hubs</dt><dd class="m-text-6">San Francisco · London · Singapore · Bangalore</dd></div>
+        <div><dt class="m-text-4">Engagement Hours</dt><dd class="m-text">US, European, and APAC time zone coverage</dd></div>
+        <div><dt class="m-text-4">Response SLA</dt><dd class="m-text">Direct response within one business day</dd></div>
+        <div><dt class="m-text-4">Email</dt><dd><a class="m-link" href="mailto:hello@edishconnect.com">hello@edishconnect.com</a></dd></div>
+      </dl>
+      <form class="ct-form" action="#" method="post" novalidate data-motion="rise" data-enter="86%" data-items=":scope > *">
+        <label class="m-field"><span class="m-field__label">Name</span><input name="name" type="text" autocomplete="name" required></label>
+        <label class="m-field"><span class="m-field__label">Work Email</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="m-field ct-wide"><span class="m-field__label">Engineering Focus</span><select name="sport"><option>Product Engineering</option><option>AI &amp; Data Engineering</option><option>Platform &amp; Cloud Engineering</option><option>Quality Engineering</option><option>Staff Augmentation</option><option>Dedicated Pod</option><option>ODC / GCC Center</option><option>Build-Operate-Transfer (BOT)</option></select></label>
+        <label class="m-field ct-wide"><span class="m-field__label">What are you building or scaling?</span><textarea name="goal" rows="3" placeholder="Tell us about your systems, stack, and where development is slowing down..."></textarea></label>
+        <div class="ct-send">
+          <button class="m-btn" type="submit"><span class="m-btn__label">Start the Conversation</span></button>
+          <p class="ct-status m-text-4" role="status" data-ok="Thank you. An engineering director will reach out within one business day." data-error="Please provide your name and a valid work email address."></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<!-- footer: width-filling wordmark, a line about the company, links, socials, copyright -->
+<footer id="footer" data-section="footer">
+  <div class="ft-slide m-slide-2">
+    <p class="ft-word m-text-2" style="--len:13" data-motion="streak" data-from="left">edish connect</p>
+    <div class="ft-cols">
+      <p class="m-text">An Engineering Growth Company. Where Engineering Meets Inspiration. We partner with engineering leaders to build product, platform, and AI capability inside their organizations.</p>
+      <nav aria-label="Footer">
+        <ul data-items=":scope > li">
+          <li><a class="m-link" href="#culture">Philosophy</a></li>
+          <li><a class="m-link" href="#capabilities">Models</a></li>
+          <li><a class="m-link" href="#process">Capabilities</a></li>
+          <li><a class="m-link" href="#growth">Delivery</a></li>
+          <li><a class="m-link" href="#models">Engagement</a></li>
+        </ul>
+      </nav>
+      <ul data-items=":scope > li">
+        <li><a class="m-link" href="https://www.linkedin.com/company/edish-connect" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="m-link" href="https://github.com/edish-connect" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="m-link" href="mailto:hello@edishconnect.com">hello@edishconnect.com</a></li>
+      </ul>
+      <p class="ft-legal m-text-4">© 2026 Edish Connect. All rights reserved. Engineering Navy · Inspiration Gold</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script>
+<script data-module="section-script:navigation">
+(() => {
+  const root = document.getElementById('navigation');
+  const bar = root.querySelector('.nav__bar');
+  const toggle = root.querySelector('.nav__menu');
+  const menu = root.querySelector('.menu');
+  const close = root.querySelector('.menu__close');
+  let lastY = scrollY, turnY = scrollY, hidden = false;
+  addEventListener('scroll', () => {
+    const y = scrollY;
+    if (y > lastY) { if (hidden) turnY = y; else if (y > 160 && y - turnY > 24) { hidden = true; bar.setAttribute('data-hidden', ''); turnY = y; } }
+    else if (y < lastY) { if (!hidden) turnY = y; else if (turnY - y > 24 || y < 80) { hidden = false; bar.removeAttribute('data-hidden'); turnY = y; } }
+    lastY = y;
+  }, { passive: true });
+  bar.addEventListener('focusin', () => { hidden = false; bar.removeAttribute('data-hidden'); });
+  const open = state => {
+    menu.hidden = !state; toggle.setAttribute('aria-expanded', String(state));
+    if (state) { window.lenis?.stop(); close.focus(); } else { window.lenis?.start(); toggle.focus(); }
+  };
+  toggle.addEventListener('click', () => open(true));
+  close.addEventListener('click', () => open(false));
+  menu.addEventListener('click', event => { if (event.target.closest('a')) { menu.hidden = true; toggle.setAttribute('aria-expanded', 'false'); window.lenis?.start(); } });
+  addEventListener('keydown', event => { if (event.key === 'Escape' && !menu.hidden) open(false); });
+})();
+</script>
+<script data-module="section-script:hero">
+(() => {
+  const stage = document.querySelector('#hero .op-s1');
+  new IntersectionObserver(([entry]) => entry.isIntersecting ? stage.removeAttribute('data-paused') : stage.setAttribute('data-paused', '')).observe(stage);
+})();
+</script>
+<script data-module="motion-queue">
+(() => {
+  'use strict';
+  const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
+  const parsed = document.readyState === 'loading' ? new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, { once: true })) : Promise.resolve();
+  const ready = () => Promise.all([fonts, parsed]).then(() => firsts);
+  const nextTask = () => window.scheduler?.yield?.() ?? new Promise(resolve => setTimeout(resolve));
+  const refresh = () => {
+    if (typeof window.refreshScroll === 'function') return window.refreshScroll();
+    window.ScrollTrigger?.sort(); window.ScrollTrigger?.refresh();
+  };
+  const run = (setup, name) => {
+    for (const trigger of window.ScrollTrigger?.getAll() || []) if (!trigger.end && window.ScrollTrigger.getAll().includes(trigger)) trigger.refresh(0, 1);
+    const context = window.gsap.context(() => {});
+    const log = new MutationObserver(() => {});
+    log.observe(document.documentElement, { attributes: true, attributeOldValue: true, subtree: true });
+    let failure = null, records;
+    try { context.add(() => { try { setup(); } catch (error) { failure = error; } }); }
+    finally { records = log.takeRecords(); log.disconnect(); }
+    if (!failure) return true;
+    try { context.revert(); } catch (error) { console.error(name, 'revert failed', error); }
+    for (const { target, attributeName, oldValue } of records.reverse()) {
+      const now = target.getAttribute(attributeName);
+      if (oldValue == null) { if (now != null) target.removeAttribute(attributeName); }
+      else if (now !== oldValue) target.setAttribute(attributeName, oldValue);
+    }
+    console.error(name, failure);
+    return false;
+  };
+  let firsts = Promise.resolve(), tail = null, pending = 0, lazy = null, building = 0, firstCount = 0;
+  window.motionReady = ready();
+  parsed.then(() => { if (firstCount && !tail) firsts.then(refresh); });
+  window.queueMotion = (setup, { first = false, near, id } = {}) => {
+    if (!window.gsap || typeof setup !== 'function') return;
+    const name = id || document.currentScript?.getAttribute('data-module') || 'motion';
+    if (near instanceof Element && window.IntersectionObserver) {
+      const watch = new IntersectionObserver(entries => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        watch.disconnect();
+        building++;
+        lazy = (lazy || ready()).then(nextTask).then(() => run(setup, name)).finally(() => { if (!--building) refresh(); });
+      }, { rootMargin: '100% 0px' });
+      watch.observe(near);
+      return;
+    }
+    if (first) { firstCount++; firsts = firsts.then(() => fonts).then(() => { if (!run(setup, name)) refresh(); }); }
+    else {
+      pending++;
+      tail = (tail || ready()).then(nextTask).then(() => run(setup, name))
+        .finally(() => { if (!--pending) refresh(); });
+    }
+    window.motionReady = Promise.all([firsts, tail]);
+  };
+})();
+</script>
+<script data-module="page-init">
+gsap.registerPlugin(ScrollTrigger);
+function refreshScroll() { ScrollTrigger.sort(); ScrollTrigger.refresh(); }
+gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+  const bar = document.querySelector('#navigation .nav__bar');
+  const offset = bar ? bar.getBoundingClientRect().bottom + 12 : 0;
+  const lenis = window.lenis = new Lenis({ lerp: 0.09, anchors: { offset: -offset } });
+  const tick = time => lenis.raf(time * 1000);
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(tick); gsap.ticker.lagSmoothing(0);
+  return () => { gsap.ticker.remove(tick); gsap.ticker.lagSmoothing(500, 33); lenis.destroy(); window.lenis = null; };
+});
+</script>
+<script data-module="motion">
+const blurOK = () => matchMedia('(min-width: 1024px) and (hover: hover)').matches;
+const effects = {
+  streak(element, vars = {}) {
+    const dir = vars.dir || (element.dataset.from === 'left' ? -1 : 1);
+    return gsap.timeline(vars.timeline)
+      .fromTo(element, { x: () => dir * Math.min(innerWidth * .22, 320), skewX: -20 * dir, scaleX: 1.15, transformOrigin: dir > 0 ? '100% 50%' : '0% 50%' },
+        { x: 0, skewX: 0, scaleX: 1, duration: 1, ease: vars.ease || 'expo.out', immediateRender: true }, 0)
+      .fromTo(element, { opacity: 0 }, { opacity: 1, duration: .35, ease: 'none', immediateRender: true }, 0);
+  },
+  focus(element, vars = {}) {
+    const blur = blurOK();
+    return gsap.timeline(vars.timeline)
+      .fromTo(element, { scale: 1.14, filter: blur ? 'blur(14px)' : 'none' },
+        { scale: 1, filter: blur ? 'blur(0px)' : 'none', duration: 1.2, ease: 'power3.out', immediateRender: true, clearProps: blur ? 'filter' : '' });
+  },
+  rise(element, vars = {}) {
+    return gsap.timeline(vars.timeline)
+      .fromTo(element.children, { y: 32, opacity: 0 }, { y: 0, opacity: 1, duration: .8, stagger: .09, ease: 'power3.out', immediateRender: true });
+  },
+  orbit(element, vars = {}) {
+    const circles = element.querySelectorAll('circle, ellipse');
+    return gsap.timeline(vars.timeline)
+      .fromTo(element, { rotation: -24 }, { rotation: 24, duration: 1, ease: 'none', immediateRender: true }, 0)
+      .fromTo(circles, { strokeDashoffset: 1 }, { autoRound: false, strokeDashoffset: 0, duration: .45, stagger: .05, ease: 'power2.out', immediateRender: true }, 0);
+  }
+};
+const bindings = {
+  streak: element => ({ trigger: element, start: 'top 88%', once: true }),
+  focus: element => ({ trigger: element, start: 'top 85%', once: true }),
+  rise: element => ({ trigger: element, start: 'top 86%', once: true }),
+  orbit: element => ({ trigger: element, start: 'top bottom', end: 'bottom top', scrub: true })
+};
+document.querySelectorAll('[data-section]').forEach(section => {
+  Object.keys(bindings).forEach(name => {
+    const elements = section.querySelectorAll(`[data-motion~="${name}"]`);
+    if (!elements.length) return;
+    const id = `effect:${name}:${section.id}`;
+    queueMotion(() => gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+      elements.forEach((element, index) => ScrollTrigger.create({ id: `${id}:${index}`, ...bindings[name](element), animation: effects[name](element) }));
+    }), { first: section.getBoundingClientRect().top < innerHeight, id });
+  });
+});
+</script>
+<script data-module="scene:hero">
+queueMotion(() => {
+  gsap.matchMedia().add({ motion: '(prefers-reduced-motion: no-preference)', blur: '(min-width: 1024px) and (hover: hover)' }, context => {
+    if (!context.conditions.motion) return;
+    const section = document.getElementById('opening');
+    const q = selector => section.querySelector(selector);
+    const vw = f => () => innerWidth * f;
+    const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'opening', trigger: section, start: 'top top', end: () => '+=' + q('.op-s1').offsetHeight, scrub: true, invalidateOnRefresh: true
+    }});
+    timeline
+      .to(q('.op-line--1'), { x: vw(-.6), skewX: 24, scaleX: 1.25, transformOrigin: '100% 50%', duration: .7, ease: 'power1.in' }, 0)
+      .to(q('.op-line--2'), { x: vw(.55), skewX: -24, scaleX: 1.25, transformOrigin: '0% 50%', duration: .66, ease: 'power1.in' }, .03)
+      .to(q('.op-line--3'), { x: vw(-.75), skewX: 24, scaleX: 1.25, transformOrigin: '100% 50%', duration: .62, ease: 'power1.in' }, .06)
+      .to(section.querySelectorAll('.op-line'), { opacity: 0, duration: .2, ease: 'none' }, .5)
+      .to(q('.op-meta'), { y: -40, opacity: 0, duration: .35 }, 0)
+      .to(q('.op-photo'), { scale: 1.3, xPercent: -6, filter: context.conditions.blur ? 'blur(10px)' : 'none', duration: 1 }, 0)
+      .to(q('.op-ring'), { opacity: 0, duration: .5 }, 0)
+      .to(q('.op-slide'), { scale: .8, yPercent: -4, xPercent: 6, duration: 1, ease: 'power1.in' }, 0)
+      .to(q('.op-dim'), { opacity: .78, duration: 1 }, 0)
+      .to(q('.op-ground'), { opacity: 0, duration: 1 }, 0)
+      .fromTo(q('.op-card'), { x: vw(.08), rotation: 2.5 }, { x: 0, rotation: 0, duration: 1, ease: 'power2.out' }, 0)
+      .fromTo(q('.op-title2'), { x: vw(.35), skewX: -24, scaleX: 1.3, transformOrigin: '0% 50%' }, { x: 0, skewX: 0, scaleX: 1, duration: .8, ease: 'expo.out' }, .2)
+      .fromTo(q('.op-orb'), { x: vw(.6), rotation: 300, scale: .4 }, { x: 0, rotation: 0, scale: 1, duration: 1, ease: 'power3.out' }, 0);
+  });
+}, { first: true, id: 'opening' });
+</script>
+<script data-module="section-script:contact">
+(() => {
+  const form = document.querySelector('#contact .ct-form');
+  const status = form.querySelector('.ct-status');
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const ok = form.checkValidity();
+    status.textContent = ok ? status.dataset.ok : status.dataset.error;
+    if (ok) form.reset();
+  });
+})();
+</script>
+<script data-module="scene:culture">
+queueMotion(() => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+    const section = document.getElementById('culture');
+    const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'method', trigger: section.querySelector('.mt-title'), start: 'top 92%', end: 'top 32%', scrub: true, invalidateOnRefresh: true
+    }});
+    section.querySelectorAll('.mt-gap').forEach((gap, index) => {
+      const chip = gap.querySelector('.mt-chip');
+      const after = gap.parentElement.querySelector('.mt-after');
+      const at = index * .16;
+      if (after) {
+        timeline.fromTo(after, { x: () => -gap.offsetWidth }, { x: 0, duration: .45, ease: 'power2.out' }, at);
+      }
+      timeline.fromTo(chip,
+        { x: () => -gap.offsetWidth * 0.5, y: () => -Math.max(gap.offsetWidth * 1.2, 50), rotation: -300, scale: .45, opacity: 0 },
+        { x: 0, y: 0, rotation: 0, scale: 1, opacity: 1, duration: .7, ease: 'power2.inOut' },
+        at + .04
+      );
+    });
+  });
+});
+</script>
+<script data-module="scene:capabilities">
+queueMotion(() => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+    const section = document.getElementById('capabilities');
+    const grid = section.querySelector('.ds-grid');
+    const tiles = [...grid.querySelectorAll('.ds-tile')];
+    const tilt = [-8, 5, -3, 9, -6, 3, -10, 6];
+    const toCentre = (tile, axis) => axis === 'x'
+      ? grid.clientWidth / 2 - (tile.offsetLeft + tile.offsetWidth / 2)
+      : Math.min(grid.clientHeight, innerHeight * .9) / 2 - (tile.offsetTop + tile.offsetHeight / 2);
+    const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'disciplines', trigger: grid, start: 'top 88%', end: () => grid.offsetHeight > innerHeight ? 'top 2%' : grid.offsetHeight > innerHeight * .8 ? 'top 38%' : 'center 52%', scrub: true, invalidateOnRefresh: true
+    }});
+    gsap.set(tiles, { zIndex: index => tiles.length - index });
+    tiles.forEach((tile, index) => {
+      timeline.fromTo(tile, {
+        x: () => toCentre(tile, 'x'), y: () => toCentre(tile, 'y'), rotation: tilt[index % tilt.length],
+        scale: () => Math.min(1, 210 / tile.offsetWidth, 240 / tile.offsetHeight)
+      }, { x: 0, y: 0, rotation: 0, scale: 1, duration: .5, ease: 'power2.inOut' }, index * .07);
+    });
+  });
+});
+</script>
+<script data-module="scene:process">
+queueMotion(() => {
+  gsap.matchMedia().add({ motion: '(prefers-reduced-motion: no-preference)', wide: '(min-width: 861px)' }, context => {
+    if (!context.conditions.motion) return;
+    const section = document.getElementById('process');
+    const stage = section.querySelector('.lb-stage');
+    const notes = [...section.querySelectorAll('.lb-note')];
+    const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'lab', trigger: stage, start: 'top 88%', end: 'center 55%', scrub: true, invalidateOnRefresh: true
+    }});
+    timeline
+      .fromTo(section.querySelector('.lb-lens'), { clipPath: 'circle(7% at 50% 50%)' }, { clipPath: 'circle(50% at 50% 50%)', duration: 1, ease: 'power2.inOut' }, 0)
+      .fromTo(section.querySelector('.lb-lens img'), { scale: 1.5 }, { scale: 1, duration: 1, ease: 'power2.out' }, 0)
+      .fromTo(section.querySelector('.lb-ring'), { rotation: -140, transformOrigin: '50% 50%' }, { rotation: 0, duration: 1, ease: 'power2.out' }, 0)
+      .fromTo(section.querySelector('.lb-ring circle'), { strokeDashoffset: 1 }, { autoRound: false, strokeDashoffset: 0, duration: .6 }, 0);
+    if (context.conditions.wide) {
+      notes.forEach((note, index) => {
+        const angle = parseFloat(note.style.getPropertyValue('--a')) || 0;
+        timeline.fromTo(note, { '--a': '-90deg', opacity: 0 }, { '--a': `${angle}deg`, opacity: 1, duration: .7, ease: 'power2.out' }, .2 + index * .06);
+      });
+    } else {
+      timeline.fromTo(notes, { x: 48, opacity: 0 }, { x: 0, opacity: 1, duration: .45, stagger: .08, ease: 'power2.out' }, .45);
+    }
+  });
+});
+</script>
+<script data-module="scene:growth">
+queueMotion(() => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+    const section = document.getElementById('growth');
+    const stage = section.querySelector('.wk-stage');
+    const view = section.querySelector('.wk-view');
+    const track = section.querySelector('.wk-track');
+    section.setAttribute('data-scrubbed', '');
+    const distance = () => {
+      const pad = parseFloat(getComputedStyle(view).paddingLeft) || 0;
+      return Math.max(0, track.offsetWidth - (view.clientWidth - pad * 2));
+    };
+    const measure = () => section.style.setProperty('--wk-height', `${stage.offsetHeight + distance()}px`);
+    measure();
+    ScrollTrigger.addEventListener('refreshInit', measure);
+    const skewTo = gsap.quickTo(track, 'skewX', { duration: .45, ease: 'power3.out' });
+    const settle = gsap.delayedCall(.14, () => skewTo(0)).pause();
+    gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'growth', trigger: section, start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true,
+      onUpdate: self => { skewTo(gsap.utils.clamp(-9, 9, self.getVelocity() / -260)); settle.restart(true); }
+    }})
+      .to(track, { x: () => -distance(), duration: 1 }, 0)
+      .fromTo(section.querySelector('.wk-progress span'), { scaleX: 0 }, { scaleX: 1, duration: 1 }, 0);
+    return () => {
+      ScrollTrigger.removeEventListener('refreshInit', measure);
+      section.style.removeProperty('--wk-height');
+      section.removeAttribute('data-scrubbed');
+    };
+  });
+});
+</script>
+<script data-module="scene:foundations">
+queueMotion(() => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+    const section = document.getElementById('recovery');
+    gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'recovery', trigger: section.querySelector('.rc-window'), start: 'top 92%', end: 'center 50%', scrub: true
+    }})
+      .fromTo(section.querySelector('.rc-sun'), { yPercent: -110, scale: .8 }, { yPercent: 0, scale: 1, duration: 1, ease: 'power1.inOut' }, 0)
+      .fromTo(section.querySelector('.rc-cool'), { opacity: 0 }, { opacity: 1, duration: 1 }, 0)
+      .fromTo(section.querySelector('.rc-sea img'), { yPercent: -5, scale: 1.12 }, { yPercent: 0, scale: 1, duration: 1 }, 0);
+  });
+});
+</script>
+<script data-module="scene:faq">
+queueMotion(() => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+    const section = document.getElementById('faq');
+    const rail = section.querySelector('.fq-rail');
+    const ball = section.querySelector('.fq-ball');
+    const travel = () => Math.max(0, rail.clientHeight - ball.offsetHeight);
+    gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'faq', trigger: section.querySelector('.fq-list'), start: 'top 72%', end: 'bottom 72%', scrub: .5, invalidateOnRefresh: true
+    }})
+      .fromTo(ball, { y: 0, rotation: 0 }, { y: travel, rotation: () => travel() / (Math.PI * ball.offsetWidth) * 360, duration: 1 });
+    const items = section.querySelectorAll('.fq-item');
+    const onToggle = () => refreshScroll();
+    items.forEach(item => item.addEventListener('toggle', onToggle));
+    return () => items.forEach(item => item.removeEventListener('toggle', onToggle));
+  });
+});
+</script>
+<script data-module="scene:contact">
+queueMotion(() => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+    const section = document.getElementById('contact');
+    const run = section.querySelector('.ct-run');
+    const title = section.querySelector('.ct-title');
+    gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'contact', trigger: run, start: 'top 92%', end: 'top 38%', scrub: true, invalidateOnRefresh: true
+    }})
+      .fromTo(section.querySelector('.ct-line'), { scaleX: () => title.offsetWidth / run.clientWidth }, { scaleX: 1, duration: 1, ease: 'power2.inOut' }, 0)
+      .fromTo(title, { x: () => -(run.clientWidth - title.offsetWidth), skewX: -16 }, { x: 0, skewX: 0, duration: 1, ease: 'power2.inOut' }, 0);
+  });
+});
+</script>
+</body>
+</html>
